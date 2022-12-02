@@ -5,3 +5,10 @@
 @import url(./header/__title/header__title.css);
 @import url(./header/__title-span/header__title-span.css);
 @import url(./header/__line/header__line.css);
+
+@import url(./main/main.css);
+
+@import url(./profile/profile.css);
+@import url(./profile/__image/profile__image.css);
+@import url(./profile/__name/profile__name.css);
+@import url(./profile/__description/profile__description.css);
