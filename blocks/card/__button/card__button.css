@@ -1,0 +1,7 @@
+.card__button {
+  display: flex;
+  right: 15px;
+  position: relative;
+  border: none;
+  background-color: #fff;
+}
