@@ -9,6 +9,10 @@
 @import url(./main/main.css);
 
 @import url(./profile/profile.css);
+@import url(./profile/__image-container/profile__image-container.css);
 @import url(./profile/__image/profile__image.css);
+@import url(./profile/__name-container/profile__name-container.css);
 @import url(./profile/__name/profile__name.css);
 @import url(./profile/__description/profile__description.css);
+@import url(./profile/__button-edit/profile__button-edit.css);
+@import url(./profile/__button-add/profile__button-add.css);

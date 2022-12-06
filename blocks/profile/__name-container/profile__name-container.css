@@ -1,0 +1,7 @@
+.profile__name-container {
+  position: relative;
+  align-self: center;
+  left: -75.5px;
+  /* display: flex;
+  flex-direction: column; */
+}

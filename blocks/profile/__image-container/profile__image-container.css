@@ -1,0 +1,9 @@
+.profile__image-container {
+  display: flex;
+  min-width: 168.75px;
+  min-height: 127.5px;
+  justify-content: center;
+  align-items: center;
+  left: -22.5px;
+  position: relative;
+}
