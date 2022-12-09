@@ -5,4 +5,10 @@
   border: 2px solid #FFF;
   border-radius: 2px;
   align-self: center;
+  transition: opacity 0.15s ease 0s;
+  cursor: url(../../../images/vectores/hand.svg), auto;
+}
+
+.profile__button-add:hover {
+  opacity: 0.6;
 }

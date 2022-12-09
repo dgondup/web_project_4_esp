@@ -23,3 +23,6 @@
 @import url(./card/__title-container/card__title-container.css);
 @import url(./card/__title/card__title.css);
 @import url(./card/__button/card__button.css);
+
+@import url(./footer/footer.css);
+@import url(./footer/__text/footer__text.css);

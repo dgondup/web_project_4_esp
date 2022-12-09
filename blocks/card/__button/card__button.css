@@ -1,7 +1,13 @@
 .card__button {
-  display: flex;
-  right: 15px;
-  position: relative;
+  max-height: 19px;
   border: none;
   background-color: #fff;
+  align-self: center;
+  position: relative;
+  transition: opacity 0.15s ease 0s;
+  cursor: url(../../../images/vectores/hand.svg), auto;
+}
+
+.card__button:hover {
+  opacity: 0.5;
 }

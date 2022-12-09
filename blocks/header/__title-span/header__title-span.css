@@ -1,6 +1,14 @@
 .header__title-span {
-  font-size: 0.4em;
+  font-size: 0.5em;
   position: relative;
   bottom: 15px;
   left: 5px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header__title-span {
+    font-size: 0.4em;
+  }
+}
+
+

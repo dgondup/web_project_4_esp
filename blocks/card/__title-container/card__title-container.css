@@ -1,9 +1,6 @@
 .card__title-container {
   min-height: 79px;
   display: flex;
+  padding: 25px 15px 31px 21px;
   justify-content: space-between;
-  background-color: #fff;
-  position: relative;
-  align-items: center;
-  border-radius: 0 0 10px 10px;
 }
