@@ -3,7 +3,7 @@
   align-self: center;
   left: -75.5px;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 925px) {
   .profile__name-container {
     position: unset;
     margin-top: 26.25px;
