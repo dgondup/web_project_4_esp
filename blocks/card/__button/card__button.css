@@ -1,5 +1,8 @@
 .card__button {
-  max-height: 19px;
+  background-image: url(../../../images/vectores/Vector-heart.svg);
+  background-repeat: no-repeat;
+  min-width: 21px;
+  min-height: 19px;
   border: none;
   background-color: #fff;
   align-self: center;

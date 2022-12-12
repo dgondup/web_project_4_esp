@@ -5,7 +5,7 @@
 }
 
 .root {
-  width: 100%;
+  width: 100vw;
   background-color: #000;
   font-family: 'Inter';
   -moz-osx-font-smoothing: grayscale;

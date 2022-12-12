@@ -1,0 +1,15 @@
+.popup__item {
+    border-style: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.17;
+    width: 358px;
+    height: 14px;
+    align-self: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 618px) {
+    .popup__item {
+        max-width: 238px;
+      }
+    }
