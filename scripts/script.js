@@ -20,16 +20,5 @@ function handleProfileFormSubmit(evt) {
   let nameInput = formElement.querySelector('#field1');
   nameInput.getAttribute('value') = value;
 
-  let jobInput = formElement.querySelector('#field2');
-
-    // Obtén los valores de cada campo desde la propiedad de valor correspondiente
-
-    // Selecciona los elementos donde se introducirán los valores de los campos
-
-    // Inserta nuevos valores utilizando el textContent
-    // propiedad del método querySelector()
+  //let jobInput = formElement.querySelector('#field2');
 }
-// Conecta el manipulador (handler) al formulario:
-// se observará el evento de entrega
-
-formElement.addEventListener('submit', handleProfileFormSubmit);
