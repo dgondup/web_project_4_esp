@@ -17,7 +17,7 @@
 }
 
 .card__button:checked {
-  background-image: url(../../../../images/vectores/black-heart.svg);
+  background-image: url(../../../images/vectores/black-heart.svg);
 }
 
 .card__button:active {
