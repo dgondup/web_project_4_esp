@@ -1,4 +1,5 @@
 .card__button {
+  appearance: none;
   background-image: url(../../../images/vectores/Vector-heart.svg);
   background-repeat: no-repeat;
   min-width: 21px;
@@ -13,6 +14,10 @@
 
 .card__button:hover {
   opacity: 0.5;
+}
+
+.card__button:checked {
+  background-image: url(../../../../images/vectores/black-heart.svg);
 }
 
 .card__button:active {

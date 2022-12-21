@@ -1,12 +1,13 @@
 .profile {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
 }
 
 @media screen and (min-width: 320px) and (max-width: 925px) {
   .profile {
     flex-direction: column;
     justify-content: center;
+    display: flex;
+    position: relative;
   }
 }
