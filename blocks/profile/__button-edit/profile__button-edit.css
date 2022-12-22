@@ -1,4 +1,7 @@
 .profile__button-edit {
+  background-image: url(../../../../images/vectores/Vector-edit.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   left: -28px;
   top: 16px;
   background-color: #000;
