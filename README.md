@@ -21,4 +21,4 @@ La pagina ha sido publicada en el servidor GitHub Pages, el enlace es:
 
 *desarrollado por:*
 
-#### David Gonzalez Dupuy
+#### David González Dupuy
