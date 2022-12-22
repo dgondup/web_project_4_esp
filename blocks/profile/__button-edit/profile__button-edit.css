@@ -1,7 +1,7 @@
 .profile__button-edit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-image: url(../../../images/vectores/Vector-edit.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   left: -28px;
   top: 16px;
   background-color: #000;
