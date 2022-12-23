@@ -20,12 +20,6 @@ function closePopup() {
 
 buttonClose.addEventListener('click', closePopup);
 
-// function buttonLikeClick() {
-//   buttonLike.classList.toggle('card__button_active');
-// };
-
-// buttonLike.addEventListener('click', buttonLikeClick);
-
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   const nameValue = nameInput.value;
