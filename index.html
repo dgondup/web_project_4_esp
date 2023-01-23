@@ -38,6 +38,19 @@
               <button type="submit" class="popup__button">Guardar</button>
           </fieldset>
           </form>
+
+          <form method="get" class="popup popup_place">
+            <fieldset class="popup__container">
+              <img class="popup__close-button" id="close-button-place" alt="close" src="./images/vectores/Close-Icon.svg">
+              <label class="popup__label">Nuevo Lugar</label>
+              <input type="text" class="popup__item" id="field-title" name="title" value="" placeholder="Título" required>
+              <div class="popup__line"></div>
+              <input type="url" class="popup__item" id="field-url" name="url" value="" placeholder="Enlace a la imagen" required>
+              <div class="popup__line"></div>
+              <button type="submit" class="popup__button">Crear</button>
+          </fieldset>
+          </form>
+
         </section>
         <section class="elements">
           <div class="card">
@@ -88,6 +101,6 @@
         <h4 class="footer__text">© 2021 Alrededor de los EEUU</h4>
       </footer>
     </div>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
