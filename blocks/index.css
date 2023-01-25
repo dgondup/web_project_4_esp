@@ -28,13 +28,19 @@
 @import url(./popup/__button/popup__button.css);
 
 @import url(./popup/_place/popup_place.css);
+@import url(./popup/__content/popup__content.css);
+@import url(./popup/__close-button/_position/popup__close-button_position.css);
+@import url(./popup/_content_image/popup__content_image.css);
+@import url(./popup/__image/popup__image.css);
+@import url(./popup/__title/popup__title.css);
 
 @import url(./elements/elements.css);
 @import url(./card/card.css);
 @import url(./card/__image/card__image.css);
 @import url(./card/__title-container/card__title-container.css);
 @import url(./card/__title/card__title.css);
-@import url(./card/__button/card__button.css);
+@import url(./card/__button-like/card__button-like.css);
+@import url(./card/__button-remove/card__button-remove.css);
 
 @import url(./footer/footer.css);
 @import url(./footer/__text/footer__text.css);

@@ -1,0 +1,11 @@
+.popup__content {
+  display: grid;
+  margin: 58px auto auto;
+  justify-content: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .popup__content {
+    margin-top: 130px;
+  }
+}
