@@ -4,4 +4,5 @@
   background-color: #fff;
   overflow: hidden;
   position: relative;
+  cursor: url(../../../images/vectores/hand.svg), auto;
 }

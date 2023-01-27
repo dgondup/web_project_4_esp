@@ -1,0 +1,3 @@
+.card__button-like:checked {
+  background-image: url(../../../../images/vectores/black-heart.svg);
+}

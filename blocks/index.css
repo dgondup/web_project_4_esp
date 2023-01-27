@@ -40,6 +40,7 @@
 @import url(./card/__title-container/card__title-container.css);
 @import url(./card/__title/card__title.css);
 @import url(./card/__button-like/card__button-like.css);
+@import url(./card/__button-like/_checked/card__button-like_checked.css);
 @import url(./card/__button-remove/card__button-remove.css);
 
 @import url(./footer/footer.css);

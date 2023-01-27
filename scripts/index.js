@@ -7,15 +7,12 @@ const jobInput = formElementName.querySelector('#field2');
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__description');
 
-function openPopupName() {
-  formElementName.classList.add('popup__opened');
+function togglePopupName() {
+  formElementName.classList.toggle('popup__opened');
 };
-buttonEdit.addEventListener('click', openPopupName);
 
-function closePopupName() {
-  formElementName.classList.remove('popup__opened');
-};
-buttonCloseName.addEventListener('click', closePopupName);
+buttonEdit.addEventListener('click', togglePopupName);
+buttonCloseName.addEventListener('click', togglePopupName);
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -27,7 +24,7 @@ function handleProfileFormSubmit(evt) {
 
 formElementName.addEventListener('submit', handleProfileFormSubmit);
 
-buttonSave.addEventListener('click', closePopupName);
+buttonSave.addEventListener('click', togglePopupName);
 
 const initialCards = [
   {
@@ -64,14 +61,12 @@ const buttonClosePlace = formElementPlace.querySelector('.popup__close-button');
 const titleInput = formElementPlace.querySelector('#field-title');
 const urlInput = formElementPlace.querySelector('#field-url');
 
+function togglePopupPlace () {
+  formElementPlace.classList.toggle('popup__opened');
+};
 
-buttonAddPlace.addEventListener('click', () => {
-  formElementPlace.classList.add('popup__opened');
-});
-
-buttonClosePlace.addEventListener('click', () => {
-  formElementPlace.classList.remove('popup__opened');
-});
+buttonAddPlace.addEventListener('click', togglePopupPlace);
+buttonClosePlace.addEventListener('click', togglePopupPlace);
 
 const cardsArea = document.querySelector('.elements');
 const cardTemplate = document.querySelector('.template-card').content.querySelector('.card');
@@ -79,19 +74,27 @@ const popupImage = document.querySelector('.popup_content_image');
 
 function createCard(item) {
   const node = cardTemplate.cloneNode(true);
-  node.querySelector('.card__image').src = item.link;
-  node.querySelector('.card__image').alt = item.name;
+  let cardImage = node.querySelector('.card__image');
+  cardImage.src = item.link;
+  cardImage.alt = item.name;
   node.querySelector('.card__title').textContent = item.name;
-  node.querySelector('.card__image').addEventListener('click', evt => {
+  cardImage.addEventListener('click', evt => {
     popupImage.classList.add('popup__opened');
-    popupImage.querySelector('.popup__close-button').src = './images/vectores/Close-Icon.svg';
-    popupImage.querySelector('.popup__close-button').alt = 'Close';
+    const formPopupCloseButton = popupImage.querySelector('.popup__close-button').src = './images/vectores/Close-Icon.svg';
+    formPopupCloseButton.alt = 'Close';
     popupImage.querySelector('.popup__image').src = item.link;
     popupImage.querySelector('.popup__title').textContent = item.name;
     popupImage.querySelector('.popup__close-button').addEventListener('click', () => {
-      popupImage.classList.remove('popup__opened');
+    popupImage.classList.remove('popup__opened');
     });
   });
+node.querySelector('.card__button-like').addEventListener('click', evt => {
+    evt.target.classList.toggle('.card__button-like_checked');
+});
+node.querySelector('.card__button-remove').addEventListener('click', evt => {
+  evt.target.closest('.card').remove();
+});
+
   return node;
 }
 
@@ -99,3 +102,27 @@ initialCards.forEach(item => {
   const nodeCard = createCard(item);
   cardsArea.append(nodeCard);
 });
+
+const newCardName = document.querySelector('#field-title');
+const newCardLink = document.querySelector('#field-url');
+
+const newCard = [
+  {
+    name: "",
+    link: ""
+  }
+]
+
+function handleNewCardFormSubmit (evt) {
+  evt.preventDefault();
+  const createNewCard = createCard(item);
+
+  const newCardTitle = newCardName.value;
+  cardTemplate.querySelector('.card__title').textContent = newCardTitle;
+  const newCardUrl = newCardLink.value;
+  cardTemplate.querySelector('.card__image').src = newCardUrl;
+  formElementPlace.addEventListener('submit', () => {
+  cardsArea.prepend(createNewCard);
+});
+}
+
