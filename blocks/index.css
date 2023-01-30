@@ -8,6 +8,8 @@
 @import url(./header/__line/header__line.css);
 
 @import url(./main/main.css);
+@import url(./animation-fade/animaton-fade.css);
+@import url(./fadeout/fadeout.css);
 
 @import url(./profile/profile.css);
 @import url(./profile/__image-container/profile__image-container.css);
