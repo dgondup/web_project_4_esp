@@ -35,28 +35,28 @@ buttonSave.addEventListener('click', closePopupName);
 
 const initialCards = [
   {
-    name: "Valle de Yosemite",
-    link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
+    name: "Van Duzen County Park, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/204900368_338449741209590_80989138182320846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=PxzkxeV4LnkAX-EjGrN&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCj0hk6NUxPuHf6m_kJiQnVKSq-UpcgzLLYyOi4HWCtKA&oe=64003D20"
   },
   {
-    name: "Lago Louise",
-    link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
+    name: "Patricks Point, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/199756227_332197951834769_7505939558248638511_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=j9M0MqlHy9IAX8CA-1j&tn=tAhIw-gmJx1N5hbC&_nc_ht=scontent-sjc3-1.xx&oh=00_AfD4hwRFpSHjAjlmtb_6PQSQbTrt13ADUPFMQk4by_R3TA&oe=64002E2A"
   },
   {
-    name: "Montañas Calvas",
-    link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
+    name: "Puente de Brooklyn, NY",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/120843978_172123527842213_160369575782773858_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Uk48saPXpcQAX_CBxjL&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDFVIfgHBkMGtXswfMZH0ZBfAUXk3QqVLvyZDMoIaFmSg&oe=64002B2A"
   },
   {
-    name: "Latemar",
-    link: "https://code.s3.yandex.net/web-code/latemar.jpg"
+    name: "Monte Shasta, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=ymmgMfO4qU4AX9xXHbD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfBJ__l8GTLvojfaYHztAopG2liS8fGISIR1spKymgoZfw&oe=63DE1A3F"
   },
   {
-    name: "Parque Nacional de la Vanoise",
-    link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
+    name: "Chinatown San Francisco, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=lD59yT0KxO0AX-NWyWx&_nc_oc=AQkB9113x004nCHZNJC-y9ckoRiTuHYCY4PZkDcJgO-z_hcLT8fbL9vlVOSLbi0AePo&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAL4yaSNbO12CYgsbsM_iS1thhqCdtavMXa2K3JaOpKLw&oe=63DD9276"
   },
   {
-    name: "Lago di Braies",
-    link: "https://code.s3.yandex.net/web-code/lago.jpg"
+    name: "Lake Tahoe, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/138112620_236756357965366_1434023870465215618_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=PakNx7YgP-8AX8hQ0ls&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCo3WGBUUuRfMTaRw9Md2H4cZ-xPTeNQ5v-TVz0kq6wKg&oe=64001CA3"
   }
 ];
 

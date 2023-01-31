@@ -19,21 +19,21 @@
       <main class="main">
         <section class="profile">
           <div class="profile__image-container">
-            <img class="profile__image" alt="Jacques Cousteau sonriendo" src="./images/Jacques-Cousteau.jpg">
+            <div class="profile__image"></div>
           </div>
           <div class="profile__name-container">
-            <h2 class="profile__name">Jacques Cousteau</h2>
+            <h2 class="profile__name">David GD</h2>
             <button type="button" class="profile__button-edit"></button>
-            <p class="profile__description">Explorador</p>
+            <p class="profile__description">Estudiante de programación</p>
           </div>
           <button type="button" class="profile__button-add"><img alt="add" src="./images/vectores/Vector-add.svg"></button>
           <form method="get" class="popup">
             <fieldset class="popup__container">
               <img class="popup__close-button" alt="close" src="./images/vectores/Close-Icon.svg">
               <label class="popup__label">Editar Perfil</label>
-              <input type="text" class="popup__item" id="field1" name="name" value="Jacques Cousteau" placeholder="Nombre" required>
+              <input type="text" class="popup__item" id="field1" name="name" value="David GD" placeholder="Nombre" required>
               <div class="popup__line"></div>
-              <input type="text" class="popup__item" id="field2" name="ocupación" value="Explorador" placeholder="Ocupación" required>
+              <input type="text" class="popup__item" id="field2" name="ocupación" value="Estudiante de programación" placeholder="Ocupación" required>
               <div class="popup__line"></div>
               <button type="submit" class="popup__button">Guardar</button>
           </fieldset>
@@ -50,18 +50,16 @@
           </fieldset>
           </form>
         </section>
-        <section class="elements">
+        <div class="elements">
 
-        </section>
-
-        <section class="popup popup_content_image">
+        </div>
+        <div class="popup popup_content_image">
           <div class="popup__content">
-            <img class="popup__close-button popup__close-button_position" alt="" src="">
-            <img class="popup__image" src="" alt="">
-            <h4 class="popup__title"></h4>
+            <div class="popup__close-button popup__close-button_position"></div>
+            <div class="popup__image"></div>
+            <p class="popup__title"></p>
           </div>
-        </section>
-
+        </div>
         <template class="template-card">
           <div class="card">
             <img class="card__image" alt="" src="">
@@ -72,7 +70,6 @@
             <button type="button" class="card__button-remove"></button>
           </div>
         </template>
-
       </main>
       <footer class="footer">
         <h4 class="footer__text">© 2021 Alrededor de los EEUU</h4>
