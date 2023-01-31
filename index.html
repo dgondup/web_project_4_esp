@@ -38,56 +38,46 @@
               <button type="submit" class="popup__button">Guardar</button>
           </fieldset>
           </form>
+          <form method="get" class="popup popup_place">
+            <fieldset class="popup__container">
+              <img class="popup__close-button" alt="close" src="./images/vectores/Close-Icon.svg">
+              <label class="popup__label">Nuevo Lugar</label>
+              <input type="text" class="popup__item" id="field-title" name="title" value="" placeholder="Título" required>
+              <div class="popup__line"></div>
+              <input type="url" class="popup__item" id="field-url" name="url" value="" placeholder="Enlace a la imagen" required>
+              <div class="popup__line"></div>
+              <button type="submit" class="popup__button">Crear</button>
+          </fieldset>
+          </form>
         </section>
         <section class="elements">
-          <div class="card">
-            <img class="card__image" alt="river of yosemite" src="./images/yosemite-kirill-pershin-1088404-unsplash.png">
-            <div class="card__title-container">
-              <h3 class="card__title">Valle de Yosemite</h3>
-              <input type="checkbox" class="card__button">
-            </div>
-          </div>
-          <div class="card">
-            <img class="card__image" alt="lake louise" src="./images/lake-louise-kirill-pershin-1404681-unsplash.png">
-            <div class="card__title-container">
-              <h3 class="card__title">Lago Louise</h3>
-              <input type="checkbox" class="card__button">
-            </div>
-          </div>
-          <div class="card">
-            <img class="card__image" alt="Montañas Calvas" src="./images/mount-calvas-kirill-pershin-1556355-unsplash.png">
-            <div class="card__title-container">
-              <h3 class="card__title">Montañas Calvas</h3>
-              <input type="checkbox" class="card__button">
-            </div>
-          </div>
-          <div class="card">
-            <img class="card__image" alt="Latemar" src="./images/latemar-kirill-pershin-1404681-unsplash.png">
-            <div class="card__title-container">
-              <h3 class="card__title">Latemar</h3>
-              <input type="checkbox" class="card__button">
-            </div>
-          </div>
-          <div class="card">
-            <img class="card__image" alt="Vanoise National Park" src="./images/vanoise-kirill-pershin-1556355-unsplash.png">
-            <div class="card__title-container">
-              <h3 class="card__title">Vanoise National Park</h3>
-              <input type="checkbox" class="card__button">
-            </div>
-          </div>
-          <div class="card">
-            <img class="card__image" alt="Lago di Braies" src="./images/lago-di-braies-kirill-pershin-1088404-unsplash.png">
-            <div class="card__title-container">
-              <h3 class="card__title">Lago di Braies</h3>
-              <input type="checkbox" class="card__button">
-            </div>
+
+        </section>
+
+        <section class="popup popup_content_image">
+          <div class="popup__content">
+            <img class="popup__close-button popup__close-button_position" alt="" src="">
+            <img class="popup__image" src="" alt="">
+            <h4 class="popup__title"></h4>
           </div>
         </section>
+
+        <template class="template-card">
+          <div class="card">
+            <img class="card__image" alt="" src="">
+            <div class="card__title-container">
+              <h3 class="card__title"></h3>
+              <input type="checkbox" class="card__button-like">
+            </div>
+            <button type="button" class="card__button-remove"></button>
+          </div>
+        </template>
+
       </main>
       <footer class="footer">
         <h4 class="footer__text">© 2021 Alrededor de los EEUU</h4>
       </footer>
     </div>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,11 @@
+.popup__close-button_position {
+  justify-self: end;
+  top: -2px;
+  right: -34px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .popup__close-button_position {
+    right: -28px;
+  }
+}

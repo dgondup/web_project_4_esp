@@ -1,11 +1,9 @@
-# Proyecto 4: Alrededor de los Estados Unidos
+# Proyecto 5: Alrededor de los Estados Unidos
 
 ### Descripción general
 ----------
 
-El proyecto 4, Alrededor de los Estados unidos, consta de un sitio web con el cual comienza a utilizarse más interactividad incorporando el desarrollo de un formulario simple con dos campos que modifican a traves de javascript los campos de nombre y ocupacion (titulo y subtitulo) del bloque profile de la pagina.
-
-Este proyecto tiene nuestra primera aproximacion a javascript usando funciones basicas con un addEventListener para abrir y cerrar el formulario en forma de popup, en el cual a travez de un HandlerProfleFormSubmit se ingresa el texto a modificar.
+El proyecto 5, Alrededor de los Estados unidos, consta en la reimplementación del sitio web trabajado en el proyecto 4, con el cual llevamos un poquito más lejos nuestros cononcimientos adquiridos de JavaScript, dándole más interactividad al sitio incorporando el desarrollo de un segundo formulario simple con dos campos que añade nuevas tarjetas al sitio con título y ubicación (link) de las tarjetas, además de crear un popup de las imagenes que se despliega por encima del sitio web mostrando la imagen completa y el título de la misma. Se aplican efectos de transicion suaves cada vez que se abren los popups de los formularios o de la imagen.
 
 Se trabajó en base a un formato establecido por Practicum a traves de la plataforma Figma.
 
@@ -15,7 +13,7 @@ Se trabajó en base a un formato establecido por Practicum a traves de la plataf
 
 -------------------
 
-La pagina ha sido publicada en el servidor GitHub Pages, el enlace es:
+La pagina sigue publicada en el servidor GitHub Pages, bajo el siguiente el enlace:
 
 * https://dgondup.github.io/web_project_4_esp/
 
