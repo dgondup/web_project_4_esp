@@ -54,15 +54,16 @@
         </div>
         <section class="popup popup_content_image">
           <div class="popup__content">
-            <img class="popup__close-button popup__close-button_position">
-            <img class="popup__image">
+            <img class="popup__close-button popup__close-button_position" alt="">
+            <!-- no habia puesto el alt ni src antes porque lo agrega el codigo de JS, y el w3 validator me lo marcaba como error al estar vacio, y si lo cambio a div las imagenes del popup dejan de verse, aun no se porque pasa eso -->
+            <img class="popup__image" alt="">
             <p class="popup__title"></p>
           </div>
         </section>
 
         <template class="template-card">
           <div class="card">
-            <img class="card__image">
+            <img class="card__image" alt="">
             <div class="card__title-container">
               <h3 class="card__title"></h3>
               <input type="checkbox" class="card__button-like">
