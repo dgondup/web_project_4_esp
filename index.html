@@ -27,25 +27,21 @@
             <p class="profile__description">Estudiante de programación</p>
           </div>
           <button type="button" class="profile__button-add"><img alt="add" src="./images/vectores/Vector-add.svg"></button>
-          <form method="get" class="popup">
+          <form method="get" class="popup popup__form" novalidate>
             <fieldset class="popup__container">
               <img class="popup__close-button" alt="close" src="./images/vectores/Close-Icon.svg">
               <label class="popup__label">Editar Perfil</label>
-              <input type="text" class="popup__item" id="field1" name="name" value="David GD" placeholder="Nombre" required>
-              <div class="popup__line"></div>
-              <input type="text" class="popup__item" id="field2" name="ocupación" value="Estudiante de programación" placeholder="Ocupación" required>
-              <div class="popup__line"></div>
+              <input type="text" class="popup__item popup__input" id="field1" name="name" value="David GD" placeholder="Nombre" required>
+              <input type="text" class="popup__item popup__input" id="field2" name="ocupación" value="Estudiante de programación" placeholder="Ocupación" required>
               <button type="submit" class="popup__button">Guardar</button>
           </fieldset>
           </form>
-          <form method="get" class="popup popup_place">
+          <form method="get" class="popup popup_place popup__form" novalidate>
             <fieldset class="popup__container">
               <img class="popup__close-button" alt="close" src="./images/vectores/Close-Icon.svg">
               <label class="popup__label">Nuevo Lugar</label>
-              <input type="text" class="popup__item" id="field-title" name="title" value="" placeholder="Título" required>
-              <div class="popup__line"></div>
-              <input type="url" class="popup__item" id="field-url" name="url" value="" placeholder="Enlace a la imagen" required>
-              <div class="popup__line"></div>
+              <input type="text" class="popup__item popup__input" id="field-title" name="title" value="" placeholder="Título" required>
+              <input type="url" class="popup__item popup__input" id="field-url" name="url" value="" placeholder="Enlace a la imagen" required>
               <button type="submit" class="popup__button">Crear</button>
           </fieldset>
           </form>
@@ -55,7 +51,6 @@
         <section class="popup popup_content_image">
           <div class="popup__content">
             <img class="popup__close-button popup__close-button_position" alt="">
-            <!-- no habia puesto el alt ni src antes porque lo agrega el codigo de JS, y el w3 validator me lo marcaba como error al estar vacio, y si lo cambio a div las imagenes del popup dejan de verse, aun no se porque pasa eso -->
             <img class="popup__image" alt="">
             <p class="popup__title"></p>
           </div>

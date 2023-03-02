@@ -48,11 +48,11 @@ const initialCards = [
   },
   {
     name: "Monte Shasta, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=ymmgMfO4qU4AX9xXHbD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfBJ__l8GTLvojfaYHztAopG2liS8fGISIR1spKymgoZfw&oe=63DE1A3F"
+    link: "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=2nJM0Gul7LIAX_cLoLM&_nc_ht=scontent-ord5-2.xx&oh=00_AfDulUTM4lOr643YRtz6sYIagEMGlHBKpnRCsb9O4ejEZg&oe=6401B2BF"
   },
   {
     name: "Chinatown San Francisco, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=lD59yT0KxO0AX-NWyWx&_nc_oc=AQkB9113x004nCHZNJC-y9ckoRiTuHYCY4PZkDcJgO-z_hcLT8fbL9vlVOSLbi0AePo&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAL4yaSNbO12CYgsbsM_iS1thhqCdtavMXa2K3JaOpKLw&oe=63DD9276"
+    link: "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=xtH1IQC_6tMAX8_7r68&_nc_oc=AQnqPdrZMSMVXNUAYN5mw28n4nWFNSkzw2BRzyTHnbwR93voiscG6OkJqEh9SJTXmOo&_nc_ht=scontent-ord5-2.xx&oh=00_AfCu4wLqXKyxCbV4DarkJ_LrWNFELk-_wKozVokFsyKClA&oe=64032536"
   },
   {
     name: "Lake Tahoe, CA",
