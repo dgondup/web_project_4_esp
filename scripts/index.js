@@ -178,3 +178,8 @@ formElementPlace.addEventListener('submit', (evt) => {
 
 const placeButtonSave = formElementPlace.querySelector('.popup__button');
 placeButtonSave.addEventListener('click', closePopupPlace);
+
+
+// ------------------------------------------------------------------------------------------------
+
+

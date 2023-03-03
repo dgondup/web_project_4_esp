@@ -27,24 +27,31 @@
             <p class="profile__description">Estudiante de programación</p>
           </div>
           <button type="button" class="profile__button-add"><img alt="add" src="./images/vectores/Vector-add.svg"></button>
+
           <form method="get" class="popup popup__form" novalidate>
             <fieldset class="popup__container">
               <img class="popup__close-button" alt="close" src="./images/vectores/Close-Icon.svg">
               <label class="popup__label">Editar Perfil</label>
-              <input type="text" class="popup__item popup__input" id="field1" name="name" value="David GD" placeholder="Nombre" required>
-              <input type="text" class="popup__item popup__input" id="field2" name="ocupación" value="Estudiante de programación" placeholder="Ocupación" required>
+              <input type="text" class="popup__item popup__input" id="field1" name="name" value="David GD" placeholder="Nombre" minlength="2" maxlength="40" required>
+              <span class="popup__input-error name-input-error"></span>
+              <input type="text" class="popup__item popup__input" id="field2" name="ocupación" value="Estudiante de programación" placeholder="Ocupación" minlength="2" maxlength="200" required>
+              <span class="popup__input-error ocupacion-input-error"></span>
               <button type="submit" class="popup__button">Guardar</button>
           </fieldset>
-          </form>
+
+        </form>
           <form method="get" class="popup popup_place popup__form" novalidate>
             <fieldset class="popup__container">
               <img class="popup__close-button" alt="close" src="./images/vectores/Close-Icon.svg">
               <label class="popup__label">Nuevo Lugar</label>
-              <input type="text" class="popup__item popup__input" id="field-title" name="title" value="" placeholder="Título" required>
+              <input type="text" class="popup__item popup__input" id="field-title" name="title" value="" placeholder="Título" minlength="2" maxlength="30" required>
+              <span class="popup__input-error title-input-error"></span>
               <input type="url" class="popup__item popup__input" id="field-url" name="url" value="" placeholder="Enlace a la imagen" required>
+              <span class="popup__input-error url-input-error"></span>
               <button type="submit" class="popup__button">Crear</button>
           </fieldset>
           </form>
+
         </section>
         <div class="elements">
         </div>
