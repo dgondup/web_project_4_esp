@@ -1,8 +1,7 @@
 .popup__close-button {
     max-width: 40px;
-    position: relative;
-    top: -40px;
-    right: -428px;
+    position: absolute;
+    top: -34px;
     transition: opacity 0.15s ease 0s;
     cursor: url(../../../images/vectores/hand.svg), auto;
 }
@@ -14,6 +13,6 @@
   .popup__close-button {
       max-width: 26px;
       right: -255px;
-      top: -45px;
+      top: -28px;
     }
   }

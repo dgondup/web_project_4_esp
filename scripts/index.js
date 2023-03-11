@@ -92,6 +92,7 @@ function createCard(item) {
   cardTitle.textContent = item.name;
     cardImage.addEventListener('click', evt => {
     popupImage.classList.add('popup__opened');
+    popupImage.classList.add('popup_content_image_show');
     popupImage.querySelector('.popup__content').classList.remove('fadeout');
     const formPopupCloseButton = popupImage.querySelector('.popup__close-button').src = './images/vectores/Close-Icon.svg';
     formPopupCloseButton.alt = 'Close';
@@ -101,6 +102,7 @@ function createCard(item) {
       evt.target.closest('.popup__content').classList.add('fadeout');
       setTimeout (() => {
         popupImage.classList.remove('popup__opened');
+        popupImage.classList.remove('popup_content_image_show')
       }, 500);
     });
   });
@@ -143,6 +145,7 @@ function createNewCard() {
   cardImage.alt = newCardTitle;
     cardImage.addEventListener('click', evt => {
     popupImage.classList.add('popup__opened');
+    popupImage.classList.add('popup_content_image_show');
     popupImage.querySelector('.popup__content').classList.remove('fadeout');
     const formPopupCloseButton = popupImage.querySelector('.popup__close-button').src = './images/vectores/Close-Icon.svg';
     formPopupCloseButton.alt = 'Close';
@@ -152,6 +155,7 @@ function createNewCard() {
       evt.target.closest('.popup__content').classList.add('fadeout');
       setTimeout (() => {
         popupImage.classList.remove('popup__opened');
+        popupImage.classList.remove('popup_content_image_show')
       }, 500);
     });
   });
@@ -179,9 +183,42 @@ formElementPlace.addEventListener('submit', (evt) => {
 const placeButtonSave = formElementPlace.querySelector('.popup__button');
 placeButtonSave.addEventListener('click', closePopupPlace);
 
-const closeEscKey = () => {
-  const popupList = Array.from(document.querySelectorAll('.popup__form'));
-  popupList.forEach((popupElement) => {
-    popupElement.addEventListener('keydown', )
+function popupOutsideClose (popup) {
+  popup.addEventListener('click', (evt) => {
+    if (evt.target == popup) {
+      popup.querySelector('.popup-fadeout').classList.add('fadeout');
+      setTimeout(() => {
+        popup.classList.remove('popup__opened');
+        popup.classList.remove('popup_content_image_show');
+      }, 500);
+    }
   });
 };
+
+const popupClickClose = () => {
+  const popupOpened = Array.from(document.querySelectorAll('.popup'));
+  popupOpened.forEach((popupContainer) => {
+    popupOutsideClose(popupContainer);
+    inputEsc(popupContainer);
+  });
+};
+
+popupClickClose();
+
+function inputEsc (popup) {
+  popup.addEventListener('keydown', (evt) => {
+    if (evt.keyCode === 27) {
+      console.log("estoy presionando escape")
+      popup.querySelector('.popup-fadeout').classList.add('fadeout');
+      setTimeout(() => {
+        popup.remove('popup__opened');
+        popup.remove('popup_content_image_show');
+      }, 500);
+    }
+  });
+};
+
+// const popupForm = document.querySelector('.popup__container');
+// popupForm.addEventListener('keydown', () => {
+//   inputEsc();
+// });
