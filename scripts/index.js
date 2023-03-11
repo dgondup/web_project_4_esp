@@ -2,8 +2,8 @@ const formElementName = document.querySelector('.popup');
 const buttonEdit = document.querySelector('.profile__button-edit');
 const buttonCloseName = document.querySelector('.popup__close-button');
 const buttonSave = formElementName.querySelector('.popup__button');
-const nameInput = formElementName.querySelector('#field1');
-const jobInput = formElementName.querySelector('#field2');
+const nameInput = formElementName.querySelector('#name-input');
+const jobInput = formElementName.querySelector('#ocupacion-input');
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__description');
 
@@ -122,8 +122,8 @@ initialCards.forEach(item => {
   cardsArea.append(nodeCard);
 });
 
-const titleInput = formElementPlace.querySelector('#field-title');
-const urlInput = formElementPlace.querySelector('#field-url');
+const titleInput = formElementPlace.querySelector('#title-input');
+const urlInput = formElementPlace.querySelector('#url-input');
 
 const newCard = [
   {
@@ -179,7 +179,9 @@ formElementPlace.addEventListener('submit', (evt) => {
 const placeButtonSave = formElementPlace.querySelector('.popup__button');
 placeButtonSave.addEventListener('click', closePopupPlace);
 
-
-// ------------------------------------------------------------------------------------------------
-
-
+const closeEscKey = () => {
+  const popupList = Array.from(document.querySelectorAll('.popup__form'));
+  popupList.forEach((popupElement) => {
+    popupElement.addEventListener('keydown', )
+  });
+};
