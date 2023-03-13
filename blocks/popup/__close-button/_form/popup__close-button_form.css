@@ -1,0 +1,13 @@
+.popup__close-button_form{
+  position: relative;
+  align-self: end;
+  right: -30px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 618px) {
+.popup__close-button_form {
+   max-width: 26px;
+   top: -38px;
+   right: 0;
+  }
+}

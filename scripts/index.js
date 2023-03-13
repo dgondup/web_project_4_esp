@@ -195,16 +195,6 @@ function popupOutsideClose (popup) {
   });
 };
 
-const popupClickClose = () => {
-  const popupOpened = Array.from(document.querySelectorAll('.popup'));
-  popupOpened.forEach((popupContainer) => {
-    popupOutsideClose(popupContainer);
-    inputEsc(popupContainer);
-  });
-};
-
-popupClickClose();
-
 function inputEsc (popup) {
   popup.addEventListener('keydown', (evt) => {
     if (evt.keyCode === 27) {
@@ -217,6 +207,17 @@ function inputEsc (popup) {
     }
   });
 };
+
+const popupClickClose = () => {
+  const popupOpened = Array.from(document.querySelectorAll('.popup'));
+  popupOpened.forEach((popupContainer) => {
+    popupOutsideClose(popupContainer);
+    inputEsc(popupContainer);
+  });
+};
+
+popupClickClose();
+
 
 // const popupForm = document.querySelector('.popup__container');
 // popupForm.addEventListener('keydown', () => {
