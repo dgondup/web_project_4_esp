@@ -1,27 +1,47 @@
-const formElementName = document.querySelector('.popup');
+const formElement = document.querySelector('.popup');
 const buttonEdit = document.querySelector('.profile__button-edit');
-const buttonCloseName = document.querySelector('.popup__close-button');
-const buttonSave = formElementName.querySelector('.popup__button');
-const nameInput = formElementName.querySelector('#name-input');
-const jobInput = formElementName.querySelector('#ocupacion-input');
+const buttonAddPlace = document.querySelector('.profile__button-add');
+const buttonClose = formElement.querySelector('.popup__close-button');
+const buttonSave = formElement.querySelector('.popup__button');
+const nameInput = formElement.querySelector('#name-input');
+const jobInput = formElement.querySelector('#ocupacion-input');
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__description');
 
-function openPopupName () {
-  formElementName.querySelector('.popup__container').classList.remove('fadeout');
-  formElementName.classList.add('popup__opened');
+function openPopup() {
+  formElement.querySelector('.popup__container').classList.remove('fadeout');
+  formElement.classList.add('popup__opened');
   document.addEventListener('keydown', handleEsc);
 };
 
-function closePopupName () {
-  formElementName.querySelector('.popup__container').classList.add('fadeout');
+// function openPopup (evt) {
+//       if (evt.target.classList.contains('popup_open_button')) {
+//         formElement.querySelector('.popup__container').classList.remove('fadeout');
+//         evt.target.classList.add('popup__opened');
+//         document.addEventListener('keydown', handleEsc);
+//       }
+//   };
+
+  // const handleOpenPopup = () => {
+  //   const popupProfileOpened = Array.from(document.querySelectorAll('.profile'));
+  //   popupProfileOpened.forEach((popupButtonOpen) => {
+  //     openPopup(popupButtonOpen);
+  //   });
+  // };
+
+//  handleOpenPopup(buttonEdit);
+
+function closePopup () {
+  formElement.querySelector('.popup__container').classList.add('fadeout');
   setTimeout(() => {
-    formElementName.classList.remove('popup__opened');
+    formElement.classList.remove('popup__opened');
   }, 500);
 };
 
-buttonEdit.addEventListener('click', openPopupName);
-buttonCloseName.addEventListener('click', closePopupName);
+buttonEdit.addEventListener('click', openPopup);
+buttonAddPlace.addEventListener('click', openPopup);
+buttonClose.addEventListener('click', closePopup);
+buttonSave.addEventListener('click', closePopup);
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -31,8 +51,7 @@ function handleProfileFormSubmit(evt) {
   profileJob.textContent = jobValue;
 };
 
-formElementName.addEventListener('submit', handleProfileFormSubmit);
-buttonSave.addEventListener('click', closePopupName);
+formElement.addEventListener('submit', handleProfileFormSubmit);
 
 const initialCards = [
   {
@@ -61,25 +80,6 @@ const initialCards = [
   }
 ];
 
-const formElementPlace = document.querySelector('.popup_place');
-const buttonAddPlace = document.querySelector('.profile__button-add');
-const buttonClosePlace = formElementPlace.querySelector('.popup__close-button');
-
-function openPopupPlace () {
-  formElementPlace.querySelector('.popup__container').classList.remove('fadeout');
-  formElementPlace.classList.add('popup__opened');
-  document.addEventListener('keydown', handleEsc);
-};
-
-function closePopupPlace () {
-  formElementPlace.querySelector('.popup__container').classList.add('fadeout');
-  setTimeout(() => {
-    formElementPlace.classList.remove('popup__opened');
-  }, 500);
-};
-
-buttonAddPlace.addEventListener('click', openPopupPlace);
-buttonClosePlace.addEventListener('click', closePopupPlace);
 
 const cardsArea = document.querySelector('.elements');
 const cardTemplate = document.querySelector('.template-card').content.querySelector('.card');
@@ -126,8 +126,8 @@ initialCards.forEach(item => {
   cardsArea.append(nodeCard);
 });
 
-const titleInput = formElementPlace.querySelector('#title-input');
-const urlInput = formElementPlace.querySelector('#url-input');
+const titleInput = formElement.querySelector('#title-input');
+const urlInput = formElement.querySelector('#url-input');
 
 const newCard = [
   {
@@ -174,7 +174,9 @@ function createNewCard() {
   return node;
 };
 
-formElementPlace.addEventListener('submit', (evt) => {
+const formNewCard = document.querySelector('.popup_place');
+
+formNewCard.addEventListener('submit', (evt) => {
   evt.preventDefault();
   newCard.forEach(() => {
     const nodeNewCard = createNewCard();
@@ -182,14 +184,13 @@ formElementPlace.addEventListener('submit', (evt) => {
   });
 });
 
-const placeButtonSave = formElementPlace.querySelector('.popup__button');
-placeButtonSave.addEventListener('click', closePopupPlace);
+const placeButtonSave = formNewCard.querySelector('.popup__button');
+placeButtonSave.addEventListener('click', closePopup);
 
 const handleEsc = (evt) => {
   const popup = document.querySelector('.popup__opened');
   if (evt.key === 'Escape') {
     evt.preventDefault();
-    console.log("estoy presionando escape")
     popup.querySelector('.popup-fadeout').classList.add('fadeout');
     document.removeEventListener('keydown', handleEsc);
     setTimeout(() => {
@@ -219,4 +220,3 @@ const popupClickClose = () => {
 };
 
 popupClickClose();
-document.removeEventListener('keydown', handleEsc);
