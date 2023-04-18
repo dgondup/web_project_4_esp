@@ -1,3 +1,12 @@
+const validationElements = [{
+  formSelector: ".popup",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible"
+}];
+
 const showInputError = (formElement, inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.add("popup__input_type_error");
@@ -60,12 +69,3 @@ const enableValidation = () => {
 };
 
 enableValidation(validationElements);
-
-const validationElements = [{
-  formSelector: ".popup",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__button",
-  inactiveButtonClass: "popup__button_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible"
-}];

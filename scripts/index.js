@@ -1,35 +1,47 @@
 const formElement = document.querySelector('.popup');
 const buttonEdit = document.querySelector('.profile__button-edit');
 const buttonAddPlace = document.querySelector('.profile__button-add');
-const buttonClose = formElement.querySelector('.popup__close-button');
-const buttonSave = formElement.querySelector('.popup__button');
-const nameInput = formElement.querySelector('#name-input');
-const jobInput = formElement.querySelector('#ocupacion-input');
+const buttonClose = document.querySelector('.popup__close-button');
+const buttonSave = document.querySelector('.popup__button');
+const nameInput = document.querySelector('#name-input');
+const jobInput = document.querySelector('#ocupacion-input');
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__description');
 
-function openPopup() {
-  formElement.querySelector('.popup__container').classList.remove('fadeout');
-  formElement.classList.add('popup__opened');
+// function openPopup() {
+//   const item = document.querySelector('.popup');
+//   item.querySelector('.popup__container').classList.remove('fadeout');
+//   item.classList.add('popup__opened');
+//   document.addEventListener('keydown', handleEsc);
+// };
+
+function openPopup(e) {
+  const target = e.target;
+  const selectedPopup = formElement;
+  selectedPopup.querySelector('.popup__container').classList.remove('fadeout');
+  selectedPopup.classList.add('popup__opened');
   document.addEventListener('keydown', handleEsc);
 };
 
-// function openPopup (evt) {
-//       if (evt.target.classList.contains('popup_open_button')) {
-//         formElement.querySelector('.popup__container').classList.remove('fadeout');
-//         evt.target.classList.add('popup__opened');
-//         document.addEventListener('keydown', handleEsc);
-//       }
-//   };
 
-  // const handleOpenPopup = () => {
-  //   const popupProfileOpened = Array.from(document.querySelectorAll('.profile'));
-  //   popupProfileOpened.forEach((popupButtonOpen) => {
-  //     openPopup(popupButtonOpen);
-  //   });
-  // };
 
-//  handleOpenPopup(buttonEdit);
+// function openPopup () {
+//   const popupForm = document.querySelector('.popup');
+//   if (popupForm.classList.contains('.popup__container')) {
+//     popupForm.querySelector('.popup__container').classList.remove('fadeout');
+//     popupForm.classList.add('popup__opened');
+//     document.addEventListener('keydown', handleEsc);
+//   }
+// };
+
+// const handleOpenPopup = () => {
+//   const popupProfile = Array.from(document.querySelectorAll('.profile'));
+//   popupProfile.forEach((profileButton) => {
+//     openPopup(profileButton);
+//   });
+// };
+
+// handleOpenPopup(buttonEdit);
 
 function closePopup () {
   formElement.querySelector('.popup__container').classList.add('fadeout');
@@ -56,27 +68,27 @@ formElement.addEventListener('submit', handleProfileFormSubmit);
 const initialCards = [
   {
     name: "Van Duzen County Park, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/204900368_338449741209590_80989138182320846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=exBRboeQjCsAX8M65aJ&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDIpy9D-TiglyIDLAITybw7tQT4jbVLtKupV_ZnNnecvg&oe=6439CEA0"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/204900368_338449741209590_80989138182320846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=z1qjHaXYPWgAX-MDZDn&_nc_ht=scontent-sjc3-1.xx&oh=00_AfApbpNX7sVX94pvcXftMC_hnGZ78SqxlFICgETJjTUv6Q&oe=64658860"
   },
   {
     name: "Patricks Point, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/199756227_332197951834769_7505939558248638511_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=c-aiLrqziqAAX9fRcoC&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCoLz-Fl0XG9pvpceEfMxQKub9lE4rCaSLpLGoQ069w4g&oe=6439F7EA"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/199756227_332197951834769_7505939558248638511_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=nOyCowdpfVMAX8-PxcY&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDMbo5d1YByjTNHojvf9IEpB9pH4m079lrgJk19dYO8dw&oe=6465796A"
   },
   {
     name: "Puente de Brooklyn, NY",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/120843978_172123527842213_160369575782773858_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=rkKcV_vtqRMAX_rzyln&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDexWeCPOgm2qcZCMIauj_AQ1umRsxpGVbKOk4XSE19aA&oe=6439F4EA"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/120843978_172123527842213_160369575782773858_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=X-TGRXkWYlkAX9i9wkx&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAVCFdVrstz8Aq0uct3u5EwzZ3txk2WNWypi6pxDUi_gw&oe=6465766A"
   },
   {
     name: "Monte Shasta, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=TrPiZDw82PwAX-9q1fG&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDF9xSSOa1pst8qhTyPWb23856NvAjG2kKyDfR-0yEG5w&oe=6417737F"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=6SRRxN0WpCwAX9OeYmJ&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAFW4oDZtqYruzMGPDuHXhM204eNQdsJCn_5v98NqC_9Q&oe=6442F4FF"
   },
   {
     name: "Chinatown San Francisco, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=gA2S8L9R-4YAX_dThIL&_nc_oc=AQk6jqYb9yjzGOqKoY3MRsDdsV7QrpfSpAuNe-VG-fKmOBo4LMiaFIK8Fk35owbh-3k&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAUNNaIme4XGq_lb0ovhU4hDASKp6h_1mIaNNQgMGnScQ&oe=6416EBB6"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=VFSFHgX7YoUAX9yRkGo&_nc_oc=AQkXXIiEHKeKIUqlpat-RAZfh_QhkiB19lTL5HqIQAAMVfFBjRy0wMPGMHj_Wjv5jJ8&_nc_ht=scontent-sjc3-1.xx&oh=00_AfB7hAAW92XlL3QjT4AsH1qdJOTpdRcRyebbgapvrLspbQ&oe=64426D36"
   },
   {
-    name: "Lake Tahoe, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/138038083_227010315686867_4058809446922602648_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=jYf-yVpEXq8AX8xP5Qg&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAVFbu_LcXG-8nSTOPL0dfnRDLaqlKhgleibbNlQFVtIw&oe=6439F4A5"
+    name: "Joshua Tree, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/337883154_234177629010235_9016534397902803845_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=dlm-aeCABBsAX-IK0HP&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAQnXd9nE0tSmhixPZgBvA5XplzEV6mrOIAC77YQyxLPw&oe=6442F2E4"
   }
 ];
 
@@ -174,7 +186,8 @@ function createNewCard() {
   return card;
 };
 
-const formNewCard = document.querySelector('.popup_place');
+//const formNewCard = document.querySelector('.popup_place');
+const formNewCard = document.forms.placeForm;
 
 formNewCard.addEventListener('submit', (evt) => {
   evt.preventDefault();
