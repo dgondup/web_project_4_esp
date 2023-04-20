@@ -7,6 +7,11 @@ const nameInput = document.querySelector('#name-input');
 const jobInput = document.querySelector('#ocupacion-input');
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__description');
+const cardsArea = document.querySelector('.elements');
+const cardTemplate = document.querySelector('.template-card').content.querySelector('.card');
+const popupImage = document.querySelector('.popup_content_image');
+const titleInput = formElement.querySelector('#title-input');
+const urlInput = formElement.querySelector('#url-input');
 
 // function openPopup() {
 //   const item = document.querySelector('.popup');
@@ -93,9 +98,6 @@ const initialCards = [
 ];
 
 
-const cardsArea = document.querySelector('.elements');
-const cardTemplate = document.querySelector('.template-card').content.querySelector('.card');
-const popupImage = document.querySelector('.popup_content_image');
 
 function createCard(item) {
   const card = cardTemplate.cloneNode(true);
@@ -138,8 +140,6 @@ initialCards.forEach(item => {
   cardsArea.append(nodeCard);
 });
 
-const titleInput = formElement.querySelector('#title-input');
-const urlInput = formElement.querySelector('#url-input');
 
 // const newCard = [
 //   {
