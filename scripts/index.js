@@ -20,15 +20,18 @@ const urlInput = formElement.querySelector('#url-input');
 //   document.addEventListener('keydown', handleEsc);
 // };
 
-function openPopup(e) {
-  const target = e.target;
-  const selectedPopup = formElement;
-  selectedPopup.querySelector('.popup__container').classList.remove('fadeout');
-  selectedPopup.classList.add('popup__opened');
+function openPopup(evt) {
+  evt.target.classList.closest('.popup__container').classList.remove('fadeout');
+  evt.target.classList.add('popup__opened');
   document.addEventListener('keydown', handleEsc);
 };
 
-
+const handleOpenPopup = (evt) => {
+  const formList = Array.from(formElement)
+  formList.forEach((button) => {
+    openPopup(button);
+  });
+};
 
 // function openPopup () {
 //   const popupForm = document.querySelector('.popup');
@@ -55,8 +58,8 @@ function closePopup () {
   }, 500);
 };
 
-buttonEdit.addEventListener('click', openPopup);
-buttonAddPlace.addEventListener('click', openPopup);
+buttonEdit.addEventListener('click', handleOpenPopup);
+buttonAddPlace.addEventListener('click', handleOpenPopup);
 buttonClose.addEventListener('click', closePopup);
 buttonSave.addEventListener('click', closePopup);
 
