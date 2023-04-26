@@ -28,8 +28,8 @@
           </div>
           <button type="button" class="profile__button-add popup_open_button"><img alt="add" src="./images/vectores/Vector-add.svg"></button>
 
-          <form method="get" name="nameForm" class="popup" novalidate>
-            <fieldset class="popup__container popup-fadeout">
+          <form method="get" name="nameForm" class="popup" data-popup="popupName" novalidate>
+          <fieldset class="popup__container popup-fadeout">
               <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg">
               <label class="popup__label">Editar Perfil</label>
               <input type="text" class="popup__item popup__input" id="name-input" name="name" value="David GD" placeholder="Nombre" minlength="2" maxlength="40" required>
@@ -40,7 +40,7 @@
           </fieldset>
         </form>
 
-          <form method="get" name="placeForm" class="popup popup_place" novalidate>
+          <form method="get" name="placeForm" class="popup" data-popup="popupPlace" novalidate>
             <fieldset class="popup__container popup-fadeout">
               <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg">
               <label class="popup__label">Nuevo Lugar</label>

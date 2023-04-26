@@ -13,43 +13,13 @@ const popupImage = document.querySelector('.popup_content_image');
 const titleInput = formElement.querySelector('#title-input');
 const urlInput = formElement.querySelector('#url-input');
 
-// function openPopup() {
-//   const item = document.querySelector('.popup');
-//   item.querySelector('.popup__container').classList.remove('fadeout');
-//   item.classList.add('popup__opened');
-//   document.addEventListener('keydown', handleEsc);
-// };
-
-function openPopup(evt) {
-  evt.target.classList.closest('.popup__container').classList.remove('fadeout');
-  evt.target.classList.add('popup__opened');
+const handleOpenPopup = (evt) => {
+  const popupSelector = evt.target.getAttribute('data-popup');
+  const formSelected = document.querySelector(popupSelector);
+  formSelected.querySelector('.popup__container').classList.remove('fadeout');
+  formSelected.classList.add('popup__opened');
   document.addEventListener('keydown', handleEsc);
 };
-
-const handleOpenPopup = (evt) => {
-  const formList = Array.from(formElement)
-  formList.forEach((button) => {
-    openPopup(button);
-  });
-};
-
-// function openPopup () {
-//   const popupForm = document.querySelector('.popup');
-//   if (popupForm.classList.contains('.popup__container')) {
-//     popupForm.querySelector('.popup__container').classList.remove('fadeout');
-//     popupForm.classList.add('popup__opened');
-//     document.addEventListener('keydown', handleEsc);
-//   }
-// };
-
-// const handleOpenPopup = () => {
-//   const popupProfile = Array.from(document.querySelectorAll('.profile'));
-//   popupProfile.forEach((profileButton) => {
-//     openPopup(profileButton);
-//   });
-// };
-
-// handleOpenPopup(buttonEdit);
 
 function closePopup () {
   formElement.querySelector('.popup__container').classList.add('fadeout');
@@ -88,15 +58,15 @@ const initialCards = [
   },
   {
     name: "Monte Shasta, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=6SRRxN0WpCwAX9OeYmJ&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAFW4oDZtqYruzMGPDuHXhM204eNQdsJCn_5v98NqC_9Q&oe=6442F4FF"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?stp=c34.0.206.206a_dst-jpg_p206x206&_nc_cat=109&ccb=1-7&_nc_sid=da31f3&_nc_ohc=Rotr43GaueMAX-ON0dI&_nc_ht=scontent-sjc3-1.xx&oh=00_AfC3UACVsqWd4kPoP9xa0I9-J0eT4Q5ivhiZ2UOp8We1KQ&oe=644CD83F"
   },
   {
     name: "Chinatown San Francisco, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=VFSFHgX7YoUAX9yRkGo&_nc_oc=AQkXXIiEHKeKIUqlpat-RAZfh_QhkiB19lTL5HqIQAAMVfFBjRy0wMPGMHj_Wjv5jJ8&_nc_ht=scontent-sjc3-1.xx&oh=00_AfB7hAAW92XlL3QjT4AsH1qdJOTpdRcRyebbgapvrLspbQ&oe=64426D36"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?stp=c0.17.206.206a_dst-jpg_p206x206&_nc_cat=109&ccb=1-7&_nc_sid=da31f3&_nc_ohc=hWs8Al4LOTcAX8alDJQ&_nc_oc=AQlwMT5D-8B7nYpsBJFXcb5cSeanlQW73Sf9tXS3clXlrD9Fx2Jxe4ItBgnRIvoX3AY&_nc_ht=scontent-sjc3-1.xx&oh=00_AfA4W7mLfU4xXSF1zZ7c7ZKgS06AjfL0NZx7Z_8fD-DfYQ&oe=644E4AB6"
   },
   {
     name: "Joshua Tree, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/337883154_234177629010235_9016534397902803845_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=dlm-aeCABBsAX-IK0HP&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAQnXd9nE0tSmhixPZgBvA5XplzEV6mrOIAC77YQyxLPw&oe=6442F2E4"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/337883154_234177629010235_9016534397902803845_n.jpg?stp=c0.23.206.206a_cp6_dst-jpg_p206x206&_nc_cat=110&ccb=1-7&_nc_sid=da31f3&_nc_ohc=P467zfE96yoAX89U26w&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCEhgsch3AsXVHtegPM8X8ol8LQRRTiT9iNOQxwHsYriQ&oe=644CD624"
   }
 ];
 
@@ -138,18 +108,10 @@ function createCard(item) {
   return card;
 };
 
-initialCards.forEach(item => {
+initialCards.forEach((item) => {
   const nodeCard = createCard(item);
   cardsArea.append(nodeCard);
 });
-
-
-// const newCard = [
-//   {
-//     name: "",
-//     link: ""
-//   }
-// ];
 
 function createNewCard() {
   const card = cardTemplate.cloneNode(true);
@@ -189,7 +151,6 @@ function createNewCard() {
   return card;
 };
 
-//const formNewCard = document.querySelector('.popup_place');
 const formNewCard = document.forms.placeForm;
 
 formNewCard.addEventListener('submit', (evt) => {
