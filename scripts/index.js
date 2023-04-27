@@ -21,23 +21,21 @@ const handleOpenPopup = (evt) => {
   document.addEventListener('keydown', handleEsc);
 };
 
-const closePopup = (evt) => {
-  const popupClose = evt.target.getAttribute('data-button-close');
-  const popupCloseSelected = document.querySelector(popupClose);
-  popupCloseSelected.querySelector('.popup__container').classList.add('fadeout');
-  setTimeout(() => {
-    popupCloseSelected.classList.remove('popup__opened');
-  }, 500);
-};
-
-// function closePopup (evt) {
-//   const buttonSelector = evt.target.getAttribute('data-button-close');
-//   const formClose = document.querySelector(buttonSelector)
-//   formClose.querySelector('.popup__container').classList.add('fadeout');
+// const closePopup = (e) => {
+//   formElement.querySelector('.popup__container').classList.add('fadeout');
 //   setTimeout(() => {
-//     formClose.classList.remove('popup__opened');
+//     formElement.classList.remove('popup__opened');
 //   }, 500);
 // };
+
+const closePopup = (evt) => {
+  const buttonSelector = evt.target.getAttribute('data-button-close');
+  const formClose = document.querySelector(buttonSelector)
+  formClose.querySelector('.popup__container').classList.add('fadeout');
+  setTimeout(() => {
+    formClose.classList.remove('popup__opened');
+  }, 500);
+};
 
 buttonEdit.addEventListener('click', handleOpenPopup);
 buttonAddPlace.addEventListener('click', handleOpenPopup);
@@ -139,6 +137,7 @@ const handleCardFormSubmit = (evt) => {
 };
 
 buttonSave.addEventListener('click', closePopup);
+
 const formNewCard = document.forms.placeForm;
 formNewCard.addEventListener('submit', handleCardFormSubmit);
 
