@@ -23,32 +23,32 @@
           </div>
           <div class="profile__name-container">
             <h2 class="profile__name">David GD</h2>
-            <button type="button" class="profile__button-edit popup_open_button"></button>
+            <button type="button" class="profile__button-edit popup_open_button" data-popup=".popup__name"></button>
             <p class="profile__description">Estudiante de programación</p>
           </div>
-          <button type="button" class="profile__button-add popup_open_button"><img alt="add" src="./images/vectores/Vector-add.svg"></button>
+          <button type="button" class="profile__button-add popup_open_button" data-popup=".popup__place"><img alt="add" src="./images/vectores/Vector-add.svg" data-popup=".popup__place"></button>
 
-          <form method="get" name="nameForm" class="popup" data-popup="popupName" novalidate>
+          <form method="get" name="nameForm" class="popup popup__name" novalidate>
           <fieldset class="popup__container popup-fadeout">
-              <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg">
+              <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg" data-button-close=".popup__name">
               <label class="popup__label">Editar Perfil</label>
               <input type="text" class="popup__item popup__input" id="name-input" name="name" value="David GD" placeholder="Nombre" minlength="2" maxlength="40" required>
               <span class="popup__input-error name-input-error"></span>
               <input type="text" class="popup__item popup__input" id="ocupacion-input" name="ocupación" value="Estudiante de programación" placeholder="Ocupación" minlength="2" maxlength="200" required>
               <span class="popup__input-error ocupacion-input-error"></span>
-              <button type="submit" class="popup__button">Guardar</button>
+              <button type="submit" class="popup__button" data-button-close=".popup__name">Guardar</button>
           </fieldset>
         </form>
 
-          <form method="get" name="placeForm" class="popup popup__place" data-popup="popupPlace" novalidate>
+          <form method="get" name="placeForm" class="popup popup__place" novalidate>
             <fieldset class="popup__container popup-fadeout">
-              <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg">
+              <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg" data-button-close=".popup__place">
               <label class="popup__label">Nuevo Lugar</label>
               <input type="text" class="popup__item popup__input" id="title-input" name="title" value="" placeholder="Título" minlength="2" maxlength="30" required>
               <span class="popup__input-error title-input-error"></span>
               <input type="url" class="popup__item popup__input" id="url-input" name="url" value="" placeholder="Enlace a la imagen" required>
               <span class="popup__input-error url-input-error"></span>
-              <button type="submit" class="popup__button">Crear</button>
+              <button type="submit" class="popup__button" data-button-close=".popup__place">Crear</button>
           </fieldset>
           </form>
 
