@@ -14,7 +14,7 @@ const titleInput = formElement.querySelector('#title-input');
 const urlInput = formElement.querySelector('#url-input');
 
 const handleOpenPopup = (evt) => {
-  const popupSelector = evt.target.getAttribute('.popup_place');
+  const popupSelector = evt.target.getAttribute('data-popup');
   const formSelected = document.querySelector(popupSelector);
   formSelected.querySelector('.popup__container').classList.remove('fadeout');
   formSelected.classList.add('popup__opened');
