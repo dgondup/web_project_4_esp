@@ -1,8 +1,8 @@
 const formElement = document.querySelector('.popup');
 const buttonEdit = document.querySelector('.profile__button-edit');
 const buttonAddPlace = document.querySelector('.profile__button-add');
-const buttonClose = document.querySelector('.popup__close-button');
-const buttonSave = formElement.querySelector('.popup__button');
+const buttonsClose = document.querySelectorAll('.popup__close-button');
+const buttonsSave = document.querySelectorAll('.popup__button');
 const nameInput = document.querySelector('#name-input');
 const jobInput = document.querySelector('#ocupacion-input');
 const profileName = document.querySelector('.profile__name');
@@ -21,13 +21,6 @@ const handleOpenPopup = (evt) => {
   document.addEventListener('keydown', handleEsc);
 };
 
-// const closePopup = (e) => {
-//   formElement.querySelector('.popup__container').classList.add('fadeout');
-//   setTimeout(() => {
-//     formElement.classList.remove('popup__opened');
-//   }, 500);
-// };
-
 const closePopup = (evt) => {
   const buttonSelector = evt.target.getAttribute('data-button-close');
   const formClose = document.querySelector(buttonSelector)
@@ -39,8 +32,14 @@ const closePopup = (evt) => {
 
 buttonEdit.addEventListener('click', handleOpenPopup);
 buttonAddPlace.addEventListener('click', handleOpenPopup);
-buttonSave.addEventListener('click', closePopup);
-buttonClose.addEventListener('click', closePopup);
+
+buttonsClose.forEach(buttonClose => {
+  buttonClose.addEventListener('click', closePopup);
+});
+
+buttonsSave.forEach(buttonSave => {
+  buttonSave.addEventListener('click', closePopup);
+});
 
 const handleProfileFormSubmit = (evt) => {
   evt.preventDefault();
@@ -135,8 +134,6 @@ const handleCardFormSubmit = (evt) => {
     cardsArea.prepend(nodeNewCard);
   });
 };
-
-buttonSave.addEventListener('click', closePopup);
 
 const formNewCard = document.forms.placeForm;
 formNewCard.addEventListener('submit', handleCardFormSubmit);
