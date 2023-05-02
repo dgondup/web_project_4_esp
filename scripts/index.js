@@ -1,6 +1,6 @@
 const formElement = document.querySelector('.popup');
-const buttonEdit = document.querySelector('.profile__button-edit');
-const buttonAddPlace = document.querySelector('.profile__button-add');
+const buttonOpenFormEditName = document.querySelector('.profile__button-edit');
+const buttonOpenFormAddCard = document.querySelector('.profile__button-add');
 const buttonsClose = document.querySelectorAll('.popup__close-button');
 const buttonsSave = document.querySelectorAll('.popup__button');
 const nameInput = document.querySelector('#name-input');
@@ -30,8 +30,8 @@ const closePopup = (evt) => {
   }, 500);
 };
 
-buttonEdit.addEventListener('click', handleOpenPopup);
-buttonAddPlace.addEventListener('click', handleOpenPopup);
+buttonOpenFormEditName.addEventListener('click', handleOpenPopup);
+buttonOpenFormAddCard.addEventListener('click', handleOpenPopup);
 
 buttonsClose.forEach(buttonClose => {
   buttonClose.addEventListener('click', closePopup);
