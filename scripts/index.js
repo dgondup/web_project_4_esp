@@ -66,15 +66,15 @@ const initialCards = [
   },
   {
     name: "Monte Shasta, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?stp=c34.0.206.206a_dst-jpg_p206x206&_nc_cat=109&ccb=1-7&_nc_sid=da31f3&_nc_ohc=Rotr43GaueMAX-ON0dI&_nc_ht=scontent-sjc3-1.xx&oh=00_AfC3UACVsqWd4kPoP9xa0I9-J0eT4Q5ivhiZ2UOp8We1KQ&oe=644CD83F"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=wNGg00dadc8AX88hZPN&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCTzRlmj0QReqT5_RKoIS_F8xEuo51hJ_h2Zx4-mptzEA&oe=6456BB7F"
   },
   {
     name: "Chinatown San Francisco, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?stp=c0.17.206.206a_dst-jpg_p206x206&_nc_cat=109&ccb=1-7&_nc_sid=da31f3&_nc_ohc=hWs8Al4LOTcAX8alDJQ&_nc_oc=AQlwMT5D-8B7nYpsBJFXcb5cSeanlQW73Sf9tXS3clXlrD9Fx2Jxe4ItBgnRIvoX3AY&_nc_ht=scontent-sjc3-1.xx&oh=00_AfA4W7mLfU4xXSF1zZ7c7ZKgS06AjfL0NZx7Z_8fD-DfYQ&oe=644E4AB6"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=U4DxH5VRJogAX9uAcpr&_nc_oc=AQnOMRv_hFXx4b_gT8pCF-mxwlFwlnuBzgJgrDWKXhQ2l0dOBT9SmjCJBxOWshZ-74I&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCT29raLgJC1w1hyFqM0bU_C9KRk_8lApO2pwqnOTFL-Q&oe=645633B6"
   },
   {
     name: "Joshua Tree, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/337883154_234177629010235_9016534397902803845_n.jpg?stp=c0.23.206.206a_cp6_dst-jpg_p206x206&_nc_cat=110&ccb=1-7&_nc_sid=da31f3&_nc_ohc=P467zfE96yoAX89U26w&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCEhgsch3AsXVHtegPM8X8ol8LQRRTiT9iNOQxwHsYriQ&oe=644CD624"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/337883154_234177629010235_9016534397902803845_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=dNbCYbPUBjoAX8nL-Yn&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDs7CAyb9h4cawa5P-WYXl59Agxny_lrbKX9wZChVwf7g&oe=6456B964"
   }
 ];
 
@@ -140,6 +140,11 @@ formNewCard.addEventListener('submit', handleCardFormSubmit);
 
 const handleEsc = (evt) => {
   const popup = document.querySelector('.popup__opened');
+
+  //se que no tengo que dejar comentarios, pero el error de popup is null que me dice por apretar esc
+  //cuando no hay popups abiertos donde lo veo? probé ya abriendo el sitio en firefox, chrome y safari, y en ningun momento
+  //se me muestra dicho error.
+
   if (evt.key === 'Escape') {
     evt.preventDefault();
     popup.querySelector('.popup-fadeout').classList.add('fadeout');
