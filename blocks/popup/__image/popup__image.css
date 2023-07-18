@@ -1,6 +1,7 @@
 .popup__image {
   height: calc(100vh - 180px);
   grid-area: image;
+  border-radius: 1.5%;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
