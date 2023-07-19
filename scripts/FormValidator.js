@@ -1,12 +1,3 @@
-const validationElements = {
-  formSelector: ".popup",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__button",
-  inactiveButtonClass: "popup__button_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__input-error_active"
-};
-
 class FormValidator {
   constructor(data, formSelector) {
     this._formSelector = formSelector;
@@ -33,9 +24,9 @@ class FormValidator {
 
   _checkInputValidity = (formElement, inputElement) => {
     if (!inputElement.validity.valid) {
-      showInputError(formElement, inputElement, inputElement.validationMessage);
+      this._showInputError(formElement, inputElement, inputElement.validationMessage);
     } else {
-      hideInputError(formElement, inputElement);
+      this._hideInputError(formElement, inputElement);
     }
   };
 
@@ -46,7 +37,7 @@ class FormValidator {
   };
 
   _toggleButtonState = (inputList, buttonElement) => {
-    if (hasInvalidInput(inputList)) {
+    if (this._hasInvalidInput(inputList)) {
       buttonElement.classList.add(this._inactiveButtonClass);
     } else {
       buttonElement.classList.remove(this._inactiveButtonClass);
@@ -56,21 +47,17 @@ class FormValidator {
   _setEventListeners = (formElement) => {
     const inputList = Array.from(formElement.querySelectorAll(this._inputSelector));
     const buttonElement = formElement.querySelector(this._submitButtonSelector);
-    toggleButtonState(inputList, buttonElement);
+    this._toggleButtonState(inputList, buttonElement);
     inputList.forEach((inputElement) => {
       inputElement.addEventListener("input", () => {
-        checkInputValidity(formElement, inputElement);
-        toggleButtonState(inputList, buttonElement);
+        this._checkInputValidity(formElement, inputElement);
+        this._toggleButtonState(inputList, buttonElement);
       });
     });
   };
 
   _getForm() {
-    const formSelected = document
-    .querySelectorAll(this._formSelector)
-    .content
-    .querySelector('.popup__container');
-
+    const formSelected = document.querySelector(this._formSelector);
     return formSelected;
   }
 
@@ -83,11 +70,10 @@ class FormValidator {
       const form = this._getForm();
       const fieldsetList = Array.from(form);
       fieldsetList.forEach((fieldset) => {
-        setEventListeners(fieldset);
+        this._setEventListeners(fieldset);
       });
     });
   }
 }
 
-const validateForms = new FormValidator(validationElements, '.popup__container');
-validateForms.enableValidation();
+export default FormValidator;
