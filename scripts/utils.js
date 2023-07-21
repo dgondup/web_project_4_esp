@@ -13,6 +13,7 @@ const formNewCard = document.forms.placeForm;
 const titleInput = document.querySelector('#title-input');
 const urlInput = document.querySelector('#url-input');
 
+
 const handleOpenFormPopup = (evt) => {
   const popupSelector = evt.target.getAttribute('data-popup');
   const formSelected = document.querySelector(popupSelector);

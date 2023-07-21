@@ -33,7 +33,7 @@ class FormValidator {
   _hasInvalidInput = (inputList) => {
     return inputList.some((inputElement) => {
       return !inputElement.validity.valid;
-    })
+    });
   };
 
   _toggleButtonState = (inputList, buttonElement) => {
@@ -59,20 +59,11 @@ class FormValidator {
   _getForm() {
     const formSelected = document.querySelector(this._formSelector);
     return formSelected;
-  }
+  };
 
   enableValidation = () => {
-    const formList = Array.from(document.querySelectorAll(this._formSelector));
-    formList.forEach((formElement) => {
-      formElement.addEventListener("submit", (evt) => {
-        evt.preventDefault();
-      });
-      const form = this._getForm();
-      const fieldsetList = Array.from(form);
-      fieldsetList.forEach((fieldset) => {
-        this._setEventListeners(fieldset);
-      });
-    });
+    const form = this._getForm();
+    this._setEventListeners(form);
   }
 }
 

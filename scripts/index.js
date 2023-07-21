@@ -44,5 +44,9 @@ formNewCard.addEventListener('submit', renderNewCardSubmit);
 
 popupClickClose();
 
-const validateForms = new FormValidator(validationElements, '.popup__container');
-validateForms.enableValidation();
+
+const validateFormsName = new FormValidator(validationElements, '.popup-name');
+const validateFormsPlace = new FormValidator(validationElements, '.popup-place');
+
+validateFormsName.enableValidation();
+validateFormsPlace.enableValidation();
