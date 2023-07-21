@@ -1,15 +1,15 @@
-# Proyecto 5: Alrededor de los Estados Unidos
+# Proyecto 8: Alrededor de los Estados Unidos
 
 ### Descripción general
 ----------
 
-Proyecto 8, Alrededor de los Estados unidos, se ha modificado añadiendo refactorizando el código escrito anteriormente para adecuarlo con las reglas de la programación orientada a objetos o POO, al mismo tiempo se ha dividido el codigo JS en módulos.
+El Proyecto 8, Alrededor de los Estados unidos, se ha modificado con una refactorización del código escrito anteriormente, para adecuarlo con las reglas de la programación orientada a objetos o POO; al mismo tiempo se ha dividido el codigo JS en módulos.
 
-Se ha creado mediante JavaScript una clase Card para la creacion de cada tarjeta y se ha puesto el código en el archivo Card.js. Éste se ha exportado e importado respectivamente hacia el archivo index.js
+Se ha implementado mediante JavaScript una clase Card para la creacion de cada tarjeta y se ha puesto el código en el archivo Card.js. Éste se ha exportado e importado respectivamente hacia el archivo index.js
 
 Se ha creado mediante JavaScript una clase FormValidator para la validación de los formularios y se ha puesto el código en el archivo FormValidator.js. Éste se ha exportado e importado respectivamente hacia el archivo index.js
 
-Se ha creado un archivo utils.js en el cual se ha todo el resto del codigo, es decir variables y controladores de eventos que abren y cierran popups. Éste se ha exportado e importado respectivamente hacia el archivo index.js
+Se ha creado un archivo utils.js en el cual se ha puesto el resto del codigo, es decir variables y controladores de eventos que abren y cierran popups. Éste se ha exportado e importado respectivamente hacia el archivo index.js
 
 ---------
 
@@ -31,7 +31,7 @@ La pagina está publicada en el servidor GitHub Pages, bajo el siguiente el enla
 
 version anterior:
 
-# Proyecto 5: Alrededor de los Estados Unidos
+# Proyecto 6: Alrededor de los Estados Unidos
 
 ### Descripción general
 ----------
