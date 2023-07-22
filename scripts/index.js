@@ -2,6 +2,10 @@ import { renderCards, renderNewCardSubmit } from "./Card.js";
 import { popupClickClose, formNewCard } from "./utils.js";
 import FormValidator from "./FormValidator.js";
 
+// disculpe, se que no puedo dejar comentarios, pero he actualizado los links de las imagenes
+//y es curioso que solo en mozilla firefox no se cargan, probe en safari de IOS, safari en mi mac y chrome
+//y en todos se cargan bien las imagenes, solo firefox da el error de carga de las mismas, aun no sé porque.
+
 const initialCards = [
   {
     name: "Van Duzen County Park, CA",
