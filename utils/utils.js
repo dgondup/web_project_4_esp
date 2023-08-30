@@ -13,6 +13,41 @@ const formNewCard = document.forms.placeForm;
 const titleInput = document.querySelector('#title-input');
 const urlInput = document.querySelector('#url-input');
 
+const initialCards = [
+  {
+    name: "Van Duzen County Park, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/204900368_338449741209590_80989138182320846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=CRKeJ2Jf9HkAX_6Tr-e&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAgpZ7t1feDs6Ri3VkX7ixItGw3ZVdPja2njeHhwWtCSg&oe=6515C0E0"
+  },
+  {
+    name: "Patricks Point, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/199756227_332197951834769_7505939558248638511_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=rjU8gstFGIwAX9aD-YM&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDQEK21GFb-bTjmdIJH3YSuUoxXzQVkq3cV9rplCu0HHg&oe=6515EA2A"
+  },
+  {
+    name: "Puente de Brooklyn, NY",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/120843978_172123527842213_160369575782773858_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=XqtL79fBKa4AX_ryGLN&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCyovbvsXyD15UQ3IZuaEfZwz4YpnXAvJ9nI-W2TXwCMw&oe=6515E72A"
+  },
+  {
+    name: "Monte Shasta, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=htuAbG7wEEYAX8mJGtD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAVY3WyY5inYDTbTZhs6dzQ-Tc8LBB8m0gcbQbLxn0cxw&oe=64F2F53F"
+  },
+  {
+    name: "Chinatown San Francisco, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=nOKdKj_asSQAX-M3_2e&_nc_oc=AQn7tBdTNxTO51aVxUgHRExUnMNxZgMmFDDmLKP-9WNctzWwBK-ucGtD-PcIS1Nqke4&_nc_ht=scontent-sjc3-1.xx&oh=00_AfB9zzWwxqDZQQWPYx5-ynsvTgr516gP5TdR2qHNhDnOrA&oe=64F26D76"
+  },
+  {
+    name: "Joshua Tree, CA",
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/337883154_234177629010235_9016534397902803845_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=D1ciYgh27jkAX_FJ0nx&_nc_ht=scontent-sjc3-1.xx&oh=00_AfBI0W8JVle-4M8euddAFc3CEHsTMMyXkGyLR1jhGs3fJw&oe=64F2F324"
+  }
+];
+
+const validationElements = {
+  formSelector: ".popup",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__input-error_active"
+};
 
 const handleOpenFormPopup = (evt) => {
   const popupSelector = evt.target.getAttribute('data-popup');
@@ -106,4 +141,4 @@ const popupClickClose = () => {
 
 
 
-export { cardsArea, handleEsc, popupImage, handlePopupImageClose, handleLikeCardRemove, popupClickClose, formNewCard, titleInput, urlInput };
+export { cardsArea, handleEsc, popupImage, handlePopupImageClose, handleLikeCardRemove, popupClickClose, formNewCard, titleInput, urlInput, initialCards, validationElements };

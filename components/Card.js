@@ -1,4 +1,4 @@
-import { cardsArea, handleEsc, popupImage, handlePopupImageClose, handleLikeCardRemove, titleInput, urlInput } from "./utils.js";
+import { cardsArea, handleEsc, popupImage, handlePopupImageClose, handleLikeCardRemove, titleInput, urlInput } from "../utils/utils.js";
 
 class Card {
   constructor(cardSelector) {
