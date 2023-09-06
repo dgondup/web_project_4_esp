@@ -29,7 +29,7 @@
           <button type="button" class="profile__button-add" data-popup=".popup-place"><img alt="add" src="./images/vectores/Vector-add.svg" data-popup=".popup-place"></button>
 
           <form method="get" name="nameForm" class="popup popup-name" novalidate>
-          <fieldset class="popup__container popup-fadeout">
+          <fieldset class="popup__container popup-fadeout popup_content_selector">
               <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg" data-button-close=".popup-name">
               <label class="popup__label">Editar Perfil</label>
               <input type="text" class="popup__item popup__input" id="name-input" name="name" value="David GD" placeholder="Nombre" minlength="2" maxlength="40" required>
@@ -41,7 +41,7 @@
         </form>
 
           <form method="get" name="placeForm" class="popup popup-place" novalidate>
-            <fieldset class="popup__container popup-fadeout">
+            <fieldset class="popup__container popup-fadeout popup_content_selector">
               <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg" data-button-close=".popup-place">
               <label class="popup__label">Nuevo Lugar</label>
               <input type="text" class="popup__item popup__input" id="title-input" name="title" value="" placeholder="Título" minlength="2" maxlength="30" required>
@@ -56,7 +56,7 @@
         <div class="elements">
         </div>
         <section class="popup popup_content_image">
-          <div class="popup__content popup-fadeout">
+          <div class="popup__content popup-fadeout popup_content_selector">
             <img class="popup__close-button popup__close-button_position" alt="close-button" data-button-close=".popup">
             <img class="popup__image" alt="">
             <p class="popup__title"></p>
