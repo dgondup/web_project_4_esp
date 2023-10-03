@@ -1,5 +1,3 @@
-import buttonsClose from "./utils.js";
-
 export default class Popup {
   constructor(popupSelector) {
     this._popupSelector = popupSelector;
@@ -32,7 +30,13 @@ export default class Popup {
     }
 
     setEventListeners() {
-      buttonsClose.addEventListener('click', () => {
+      this._popupSelector.addEventListener('click', (evt) => {
+          if (evt.target == this._popupSelector) {
+            this.close();
+            }
+          });
+
+      this._popupSelector.querySelectorAll('.popup__close-button').addEventListener('click', () => {
         this.close();
       });
       document.addEventListener('keydown', () => {

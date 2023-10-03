@@ -1,8 +1,8 @@
 import Card from './Card.js';
 
 export default class DefaultCard extends Card {
-  constructor(data, cardSelector) {
-    super(cardSelector);
+  constructor({data, handleCardClick}, cardSelector) {
+    super(handleCardClick, cardSelector);
     this._name = data.name;
     this._link = data.link;
   }

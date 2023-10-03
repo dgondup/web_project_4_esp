@@ -1,17 +1,18 @@
 import Popup from "./Popup.js";
-import { nameInput, jobInput, profileName, profileJob } from "./utils.js";
 
 export default class PopupWithForm extends Popup {
-  constructor(submitForm, popupSelector) {
+  constructor(submitForm, formCallBack, popupSelector) {
+    super(popupSelector);
     this._submitForm = submitForm;
-    this._popupSelector = popupSelector;
+    this._formCallback = formCallBack;
   }
 
   _getInputValues() {
-    const nameValue = nameInput.value;
-    profileName.textContent = nameValue;
-    const jobValue = jobInput.value;
-    profileJob.textContent = jobValue;
+    const values = {};
+    Array.from(this._submitForm.querySelector('.popup__input')).forEach((item) => {
+      values[item.name] = item.value;
+    });
+    return values;
   }
 
   open() {
@@ -34,7 +35,7 @@ export default class PopupWithForm extends Popup {
     super._setEventListeners();
     this._submitForm.addEventListeners("submit", () => {
       evt.preventDefault();
-      this._getInputValues();
+      this._formCallback(this._getInputValues());
       this.close();
     });
   }
