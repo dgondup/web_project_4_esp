@@ -8,7 +8,6 @@
     <meta name="keywords" content="Practicum proyecto 4, html, css, js">
     <meta name="author" content="David Gonzalez Dupuy">
     <title>Alrededor de los EE.UU.</title>
-    <link rel="stylesheet" href='./blocks/index.css'>
   </head>
   <body>
     <div class="root">
@@ -26,11 +25,11 @@
             <button type="button" class="profile__button-edit" data-popup=".popup-name"></button>
             <p class="profile__description">Estudiante de programación</p>
           </div>
-          <button type="button" class="profile__button-add" data-popup=".popup-place"><img alt="add" src="./images/vectores/Vector-add.svg" data-popup=".popup-place"></button>
+          <button type="button" class="profile__button-add" data-popup=".popup-place"><img alt="add" id="vector-add" data-popup=".popup-place"></button>
 
           <form method="get" name="nameForm" class="popup popup-name" novalidate>
           <fieldset class="popup__container popup-fadeout">
-              <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg" data-button-close=".popup-name">
+              <img class="popup__close-button popup__close-button_form" alt="close" src=".images/vectores/Close-Icon.svg" data-button-close=".popup-name">
               <label class="popup__label">Editar Perfil</label>
               <input type="text" class="popup__item popup__input" id="name-input" name="name" value="David GD" placeholder="Nombre" minlength="2" maxlength="40" required>
               <span class="popup__input-error name-input-error"></span>
@@ -79,6 +78,5 @@
         <h4 class="footer__text">© 2021 Alrededor de los EEUU</h4>
       </footer>
     </div>
-    <script type="module" src="./pages/index.js"></script>
   </body>
 </html>

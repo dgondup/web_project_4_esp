@@ -1,3 +1,5 @@
+import "../blocks/index.css";
+import vectorAdd from "../images/vectores/Vector-add.svg";
 import Section from "../components/Section.js";
 import { initialCards, validationElements, cardsArea, popupImage, formElement, buttonFormName, initialUserInfo } from "../components/utils.js";
 import FormValidator from "../components/FormValidator.js";
@@ -5,6 +7,8 @@ import DefaultCard from "../components/DefaultCard.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import UserInfo from "../components/UserInfo.js";
 import PopupWithImage from "../components/PopupWithImage.js";
+
+document.getElementById("vector-add").src = vectorAdd;
 
 const defaultCardList = new Section({
   items: initialCards,
