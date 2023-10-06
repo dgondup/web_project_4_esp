@@ -17,9 +17,7 @@ export default class PopupWithForm extends Popup {
 
   open() {
     super.open();
-    const popupSelector = evt.target.getAttribute('data-popup');
-    const formSelected = document.querySelector(popupSelector);
-    formSelected.querySelector('.popup__container').classList.remove('fadeout');
+    this._popupSelector.querySelector('.popup__container').classList.remove('fadeout');
   }
 
   close() {

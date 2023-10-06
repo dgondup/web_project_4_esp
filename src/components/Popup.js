@@ -1,6 +1,6 @@
 export default class Popup {
   constructor(popupSelector) {
-    this._popupSelector = popupSelector;
+    this._popupSelector = document.querySelector(popupSelector);
   }
 
   open() {
@@ -30,11 +30,9 @@ export default class Popup {
     }
 
     setEventListeners() {
-      this._popupSelector.addEventListener('click', (evt) => {
-          if (evt.target == this._popupSelector) {
+      this._popupSelector.addEventListener('click', () => {
             this.close();
-            }
-          });
+            });
 
       this._popupSelector.querySelectorAll('.popup__close-button').addEventListener('click', () => {
         this.close();
