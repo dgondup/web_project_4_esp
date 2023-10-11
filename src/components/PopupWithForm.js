@@ -36,5 +36,11 @@ export default class PopupWithForm extends Popup {
       this._formCallback(this._getInputValues());
       this.close();
     });
+
+    // this._submitForm.querySelector('.popup__close-button').addEventListeners("click", () => {
+    //   evt.preventDefault();
+    //   this.close();
+    //   console.log(click);
+    // })
   }
 }

@@ -1,7 +1,7 @@
 .card__image {
   min-width: -moz-available;
   min-width: -webkit-fill-available;
-  max-width: fill-available;
+  max-width: -webkit-fill-available;
   max-height: 282px;
   object-fit: cover;
   object-position: center;

@@ -34,8 +34,9 @@ export default class Popup {
             this.close();
             });
 
-      this._popupSelector.querySelectorAll('.popup__close-button').addEventListener('click', () => {
+      this.querySelector('.popup__close-button').addEventListener('click', () => {
         this.close();
+        console.log('click');
       });
       document.addEventListener('keydown', () => {
         this._handleEscClose();

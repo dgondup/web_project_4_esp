@@ -25,15 +25,15 @@ const initialCards = [
   },
   {
     name: "Monte Shasta, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=813123&_nc_ohc=h1OTj3Bg8zkAX-qmVZG&_nc_ht=scontent-sjc3-1.xx&oh=00_AfALwZQA9lbPifjIQblhe1DIMqrIct_zFHh5kpdKw5NHeA&oe=651E76BF"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/285489287_552216763166219_3225914276126028061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=813123&_nc_ohc=FAeI88vdFMIAX9f-Mrb&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCKNxatdKBufAwlcaga1MNnGQCBvJKo6O5QPBsIKZuMVw&oe=652A543F"
   },
   {
     name: "Chinatown San Francisco, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=813123&_nc_ohc=bHT_vCjUc68AX-_emgO&_nc_oc=AQl4morUkcymgG-Pf77utRUmN7mWmHxNLNH85Qwl8-CIvS8V4-E61XXBUxtStd7CJCQ&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDWBGYfenYHN-pcD3wMdHx-spoc5mztq1XZq9O4EMiEzg&oe=651FE936"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/263354598_439809934406903_5822273761315807936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=813123&_nc_ohc=kdnThbQcOOMAX9AiOfk&_nc_oc=AQnfzz3nQ3NrdI2EMUGjUMaDxIYke2TuZOd8oHv4zIcVNW8OT7MqL39dcs6Kl5BxPsI&_nc_ht=scontent-sjc3-1.xx&oh=00_AfBjabKNEVIIci-B77qRr9ojm1cg9GzpADToaLFYlkpcnw&oe=6529CC76"
   },
   {
     name: "Joshua Tree, CA",
-    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/337720117_759136078917321_5278992920202003302_n.jpg?stp=cp6_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=813123&_nc_ohc=msbLDXGFu3AAX-wFKZN&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCukMHadilLcZM1VyB-3tKJ76IeuwWFrron1Hby-zLulw&oe=651EB659"
+    link: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/337720117_759136078917321_5278992920202003302_n.jpg?stp=cp6_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=813123&_nc_ohc=UUy_FJlNYugAX867gzA&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDnJzeKvHLJcTGvMhegJwIG7fNMxDdzrRWvoyKZAV2CoQ&oe=652A93D9"
   }
 ];
 

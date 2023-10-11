@@ -1,5 +1,6 @@
 import "../blocks/index.css";
 import vectorAdd from "../images/vectores/Vector-add.svg";
+import imageButtonClose from "../images/vectores/Close-Icon.svg";
 import Section from "../components/Section.js";
 import { initialCards, validationElements, cardsArea, popupImage, formElement, buttonFormName, initialUserInfo } from "../components/utils.js";
 import FormValidator from "../components/FormValidator.js";
@@ -9,6 +10,7 @@ import UserInfo from "../components/UserInfo.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 
 document.getElementById("vector-add").src = vectorAdd;
+document.querySelector(".popup__close-button").src = imageButtonClose;
 
 const defaultCardList = new Section({
   items: initialCards,
