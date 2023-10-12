@@ -3,15 +3,25 @@ export default class Popup {
     this._popupSelector = document.querySelector(popupSelector);
   }
 
+  _getPopupTemplate() {
+    const popupElement = document
+    .querySelector(this._popupSelector)
+    .content
+    .querySelector(".popup__content")
+    .cloneNode(true);
+
+    return popupElement;
+  }
+
   open() {
     this._popupSelector.classList.add('popup__opened');
   }
 
   close() {
-    this._popupSelector.querySelector('.popup__container').classList.add('fadeout');
+    this.querySelector('.popup__container').classList.add('fadeout');
     setTimeout (() => {
-      this._popupSelector.classList.remove('popup__opened');
-      this._popupSelector.classList.remove('popup_content_image_show')
+      this.classList.remove('popup__opened');
+      this.classList.remove('popup_content_image_show')
     }, 500);
   }
 
@@ -30,11 +40,12 @@ export default class Popup {
     }
 
     setEventListeners() {
-      this._popupSelector.addEventListener('click', () => {
+      this._popupElement.addEventListener('click', () => {
             this.close();
+            console.log('click');
             });
 
-      this.querySelector('.popup__close-button').addEventListener('click', () => {
+      this._popupSelector.querySelector('.popup__close-button').addEventListener('click', () => {
         this.close();
         console.log('click');
       });

@@ -26,6 +26,7 @@ const defaultCardList = new Section({
 
 defaultCardList.renderer();
 
+
 const userInfo = new UserInfo(initialUserInfo);
 
 const profileFormPopup = new PopupWithForm(formElement, (values) => {

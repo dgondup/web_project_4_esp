@@ -30,6 +30,7 @@ export default class Card {
   _setEventListeners() {
     this._element.querySelector('.card__image').addEventListener('click', () => {
       this._handleCardClick;
+      console.log("click");
     });
 
     cardsArea.addEventListener('click', this._handleLikeCardRemove);

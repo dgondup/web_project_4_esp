@@ -22,11 +22,6 @@ export default class PopupWithForm extends Popup {
 
   close() {
     super.close();
-    const buttonSelector = evt.target.getAttribute('data-button-close');
-    const formClose = document.querySelector(buttonSelector)
-    setTimeout(() => {
-      formClose.classList.remove('popup__opened');
-    }, 500);
   }
 
   _setEventListeners() {
