@@ -1,9 +1,11 @@
 import { cardsArea, } from "./utils.js";
 
 export default class Card {
-  constructor({ handleCardClick }, cardSelector) {
-    this._cardSelector = cardSelector;
+  constructor({data, handleCardClick}, cardSelector) {
     this._handleCardClick = handleCardClick;
+    this._cardSelector = cardSelector;
+    this._name = data.name;
+    this._link = data.link;
   }
 
   _getTemplate() {
@@ -14,6 +16,17 @@ export default class Card {
     .cloneNode(true);
 
     return cardElement;
+  }
+
+  generateCard() {
+    this._element = this._getTemplate();
+    this._setEventListeners();
+
+    this._element.querySelector('.card__image').src = this._link;
+    this._element.querySelector('.card__image').alt = this._name;
+    this._element.querySelector('.card__title').textContent = this._name;
+
+    return this._element;
   }
 
   _handleLikeCardRemove(evt) {
@@ -29,8 +42,7 @@ export default class Card {
 
   _setEventListeners() {
     this._element.querySelector('.card__image').addEventListener('click', () => {
-      this._handleCardClick;
-      console.log("click");
+      this._handleCardClick();
     });
 
     cardsArea.addEventListener('click', this._handleLikeCardRemove);

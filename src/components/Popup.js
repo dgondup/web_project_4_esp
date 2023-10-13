@@ -3,29 +3,19 @@ export default class Popup {
     this._popupSelector = document.querySelector(popupSelector);
   }
 
-  _getPopupTemplate() {
-    const popupElement = document
-    .querySelector(this._popupSelector)
-    .content
-    .querySelector(".popup__content")
-    .cloneNode(true);
-
-    return popupElement;
-  }
-
   open() {
     this._popupSelector.classList.add('popup__opened');
   }
 
   close() {
-    this.querySelector('.popup__container').classList.add('fadeout');
+    this._popupSelector.querySelector('.popup__container').classList.add('fadeout');
     setTimeout (() => {
       this.classList.remove('popup__opened');
       this.classList.remove('popup_content_image_show')
     }, 500);
   }
 
-  _handleEscClose(evt) {
+  _handleEscClose() {
     const popupOpened = document.querySelector('.popup__opened');
     if (evt.key === 'Escape') {
       evt.preventDefault();
@@ -40,7 +30,7 @@ export default class Popup {
     }
 
     setEventListeners() {
-      this._popupElement.addEventListener('click', () => {
+      this._popupSelector.addEventListener('click', () => {
             this.close();
             console.log('click');
             });
