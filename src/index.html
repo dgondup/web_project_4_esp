@@ -28,11 +28,11 @@
 
           <form method="get" name="nameForm" class="popup popup-name" novalidate>
           <fieldset class="popup__container popup-fadeout">
-              <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg" data-button-close=".popup-name">
+              <img class="popup__close-button popup__close-button_form" alt="close" id="popup-name-close" data-button-close=".popup-name">
               <label class="popup__label">Editar Perfil</label>
               <input type="text" class="popup__item popup__input" id="name-input" name="name" value="David GD" placeholder="Nombre" minlength="2" maxlength="40" required>
               <span class="popup__input-error name-input-error"></span>
-              <input type="text" class="popup__item popup__input" id="ocupacion-input" name="ocupación" value="Estudiante de programación" placeholder="Ocupación" minlength="2" maxlength="200" required>
+              <input type="text" class="popup__item popup__input" id="job-input" name="ocupación" value="Estudiante de programación" placeholder="Ocupación" minlength="2" maxlength="200" required>
               <span class="popup__input-error ocupacion-input-error"></span>
               <button type="submit" class="popup__button" data-button-close=".popup-name">Guardar</button>
           </fieldset>
@@ -40,7 +40,7 @@
 
           <form method="get" name="placeForm" class="popup popup-place" novalidate>
             <fieldset class="popup__container popup-fadeout">
-              <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg" data-button-close=".popup-place">
+              <img class="popup__close-button popup__close-button_form" alt="close" id="popup-place-close" data-button-close=".popup-place">
               <label class="popup__label">Nuevo Lugar</label>
               <input type="text" class="popup__item popup__input" id="title-input" name="title" value="" placeholder="Título" minlength="2" maxlength="30" required>
               <span class="popup__input-error title-input-error"></span>
@@ -55,7 +55,7 @@
         </div>
         <section class="popup popup_content_image">
           <div class="popup__content popup-fadeout">
-            <img class="popup__close-button popup__close-button_position" alt="close-button" data-button-close=".popup">
+            <img class="popup__close-button popup__close-button_position" id="popup-image-close" alt="close-button" data-button-close=".popup">
             <img class="popup__image" alt="">
             <p class="popup__title"></p>
           </div>

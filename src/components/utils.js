@@ -1,10 +1,10 @@
 const cardsArea = document.querySelector('.elements');
 const popupImage = document.querySelector('.popup_content_image');
 const buttonFormName = document.querySelector('.profile__button-edit');
-const buttonOpenFormAddCard = document.querySelector('.profile__button-add');
+const buttonFormAddCard = document.querySelector('.profile__button-add');
 const buttonsSave = document.querySelectorAll('.popup__button');
 const nameInput = document.querySelector('#name-input');
-const jobInput = document.querySelector('#ocupacion-input');
+const jobInput = document.querySelector('#job-input');
 const formElement = document.querySelector('.popup');
 const formNewCard = document.forms.placeForm;
 const titleInput = document.querySelector('#title-input');
@@ -54,4 +54,4 @@ const validationElements = {
 };
 
 
-export { cardsArea, popupImage, formNewCard, titleInput, urlInput, initialCards, validationElements, nameInput, jobInput, buttonFormName, formElement, initialUserInfo };
+export { cardsArea, popupImage, formNewCard, titleInput, urlInput, initialCards, validationElements, nameInput, jobInput, buttonFormName, formElement, initialUserInfo, buttonFormAddCard };

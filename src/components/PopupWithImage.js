@@ -1,4 +1,5 @@
 import Popup from "./Popup.js";
+import imageButtonClose from "../images/vectores/Close-Icon.svg";
 
 export default class PopupWithImage extends Popup {
   constructor(popupSelector) {
@@ -10,7 +11,7 @@ export default class PopupWithImage extends Popup {
     super.open();
     this._popupSelector.classList.add('popup_content_image_show');
     this._popupSelector.querySelector('.popup__content').classList.remove('fadeout');
-    this._popupSelector.querySelector('.popup__close-button').src = './images/vectores/Close-Icon.svg';
+    document.getElementById("popup-image-close").src = imageButtonClose
     this._popupSelector.querySelector('.popup__image').src = this._link;
     this._popupSelector.querySelector('.popup__title').textContent = this._name;
   }
