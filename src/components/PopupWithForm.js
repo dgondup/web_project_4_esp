@@ -17,6 +17,7 @@ export default class PopupWithForm extends Popup {
 
   open() {
     super.open();
+    this.setEventListeners();
     this._popupSelector.querySelector('.popup__container').classList.remove('fadeout');
   }
 
@@ -25,7 +26,7 @@ export default class PopupWithForm extends Popup {
   }
 
   _setEventListeners() {
-    super._setEventListeners();
+    super.setEventListeners();
     this._submitForm.addEventListeners("submit", () => {
       evt.preventDefault();
       this._formCallback(this._getInputValues());
