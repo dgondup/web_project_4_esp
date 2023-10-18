@@ -7,12 +7,12 @@ export default class PopupWithImage extends Popup {
     super.setEventListeners();
   }
 
-  open() {
-    super.open();
+  open(item) {
+    super.open(item);
     this._popupSelector.classList.add('popup_content_image_show');
     this._popupSelector.querySelector('.popup__content').classList.remove('fadeout');
     document.getElementById("popup-image-close").src = imageButtonClose
-    this._popupSelector.querySelector('.popup__image').src = this._link;
-    this._popupSelector.querySelector('.popup__title').textContent = this._name;
+    this._popupSelector.querySelector('.popup__image').src = item.link;
+    this._popupSelector.querySelector('.popup__title').textContent = item.name;
   }
 }
