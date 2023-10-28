@@ -12,7 +12,8 @@ export default class UserInfo {
   }
 
   setUserInfo(data) {
-    this._userName.textContent = data.name;
-    this._userJob.textContent = data.job;
+    this.getUserInfo(data);
+    document.querySelector(".profile__name").textContent = data.value;
+    document.querySelector(".profile__description").textContent = data.value;
   }
 }

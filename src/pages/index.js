@@ -29,7 +29,7 @@ const defaultCardList = new Section({
 defaultCardList.renderer();
 
 
-const userInfo = new UserInfo('#name-input', '#ocupacion-input');
+const userInfo = new UserInfo('#name-input', '#job-input');
 
 const profileFormPopup = new PopupWithForm(formElement, {formCallBack: (data) => {
   userInfo.setUserInfo(data);
@@ -40,7 +40,11 @@ buttonFormName.addEventListener('click', () => {
   profileFormPopup.open();
 });
 
-const addCardFormPopup = new PopupWithForm(formElement, {formCallBack:() => {}}, ".popup-place" )
+const addCardFormPopup = new PopupWithForm(formElement, {formCallBack:() => {
+    const newCard = new[{name: `${titleInput.value}`, link: `${urlInput.value}`}];
+    const newCardElement = newCard.generateCard();
+    newCard.addItem(newCardElement);
+}}, ".popup-place" )
 
 buttonFormAddCard.addEventListener('click', () => {
   addCardFormPopup.open();
