@@ -3,12 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/flag-icon.ico">
     <meta name="description" content="un recorrido por diversos parajes de EE.UU.">
     <meta name="keywords" content="Practicum proyecto 4, html, css, js">
     <meta name="author" content="David Gonzalez Dupuy">
     <title>Alrededor de los EE.UU.</title>
-    <link rel="stylesheet" href='./blocks/index.css'>
   </head>
   <body>
     <div class="root">
@@ -23,32 +21,32 @@
           </div>
           <div class="profile__name-container">
             <h2 class="profile__name">David GD</h2>
-            <button type="button" class="profile__button-edit" data-popup=".popup-name"></button>
+            <button type="button" class="profile__button-edit"></button>
             <p class="profile__description">Estudiante de programación</p>
           </div>
-          <button type="button" class="profile__button-add" data-popup=".popup-place"><img alt="add" src="./images/vectores/Vector-add.svg" data-popup=".popup-place"></button>
+          <button type="button" class="profile__button-add"><img alt="add" id="vector-add" data-popup=".popup-place"></button>
 
           <form method="get" name="nameForm" class="popup popup-name" novalidate>
-          <fieldset class="popup__container popup-fadeout">
-              <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg" data-button-close=".popup-name">
+          <fieldset class="popup__container popup-fadeout popup__jsClose">
+              <img class="popup__close-button popup__close-button_form" alt="close" id="popup-name-close">
               <label class="popup__label">Editar Perfil</label>
               <input type="text" class="popup__item popup__input" id="name-input" name="name" value="David GD" placeholder="Nombre" minlength="2" maxlength="40" required>
               <span class="popup__input-error name-input-error"></span>
-              <input type="text" class="popup__item popup__input" id="ocupacion-input" name="ocupación" value="Estudiante de programación" placeholder="Ocupación" minlength="2" maxlength="200" required>
-              <span class="popup__input-error ocupacion-input-error"></span>
-              <button type="submit" class="popup__button" data-button-close=".popup-name">Guardar</button>
+              <input type="text" class="popup__item popup__input" id="job-input" name="job" value="Estudiante de programación" placeholder="Ocupación" minlength="2" maxlength="200" required>
+              <span class="popup__input-error job-input-error"></span>
+              <button type="submit" class="popup__button">Guardar</button>
           </fieldset>
         </form>
 
           <form method="get" name="placeForm" class="popup popup-place" novalidate>
-            <fieldset class="popup__container popup-fadeout">
-              <img class="popup__close-button popup__close-button_form" alt="close" src="./images/vectores/Close-Icon.svg" data-button-close=".popup-place">
+            <fieldset class="popup__container popup-fadeout popup__jsClose">
+              <img class="popup__close-button popup__close-button_form" alt="close" id="popup-place-close">
               <label class="popup__label">Nuevo Lugar</label>
               <input type="text" class="popup__item popup__input" id="title-input" name="title" value="" placeholder="Título" minlength="2" maxlength="30" required>
               <span class="popup__input-error title-input-error"></span>
               <input type="url" class="popup__item popup__input" id="url-input" name="url" value="" placeholder="Enlace a la imagen" required>
               <span class="popup__input-error url-input-error"></span>
-              <button type="submit" class="popup__button" data-button-close=".popup-place">Crear</button>
+              <button type="submit" class="popup__button">Crear</button>
           </fieldset>
           </form>
 
@@ -56,8 +54,8 @@
         <div class="elements">
         </div>
         <section class="popup popup_content_image">
-          <div class="popup__content popup-fadeout">
-            <img class="popup__close-button popup__close-button_position" alt="close-button" data-button-close=".popup">
+          <div class="popup__content popup-fadeout popup__jsClose">
+            <img class="popup__close-button popup__close-button_position" id="popup-image-close" alt="close-button">
             <img class="popup__image" alt="">
             <p class="popup__title"></p>
           </div>
@@ -79,6 +77,5 @@
         <h4 class="footer__text">© 2021 Alrededor de los EEUU</h4>
       </footer>
     </div>
-    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
